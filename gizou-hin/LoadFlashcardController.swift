@@ -10,6 +10,8 @@ import UIKit
 
 class LoadFlashcardController: UIViewController {
 
+    @IBOutlet weak var checkBox1: CheckBox!
+    
     @IBAction func BackButton() {
         dismiss(animated: true, completion: nil)
     }
@@ -19,6 +21,5 @@ class LoadFlashcardController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
 }
