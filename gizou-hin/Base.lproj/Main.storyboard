@@ -44,11 +44,11 @@
                                     <constraint firstAttribute="height" constant="62" id="ZvW-ez-ejU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
-                                <color key="textColor" red="0.39417272809999998" green="0.12693247199999999" blue="0.031316462900000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.79641240840000005" green="0.3362385631" blue="0.1292982996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.92156862750000001" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.98378628489999997" green="0.94158644720819884" blue="0.88290670990057518" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0np-E5-5EY" secondAttribute="trailing" constant="151" id="24V-Nd-1na"/>
                             <constraint firstItem="h87-wm-zWZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Ik-QJ-7d1"/>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-1.4492753623188408" y="125.54347826086958"/>
         </scene>
-        <!--Mode Controller Scene-->
+        <!--Mode Controller-->
         <scene sceneID="yRn-GR-7Io">
             <objects>
-                <viewController id="z7C-dX-PWr" userLabel="Mode Controller Scene" sceneMemberID="viewController">
+                <viewController id="z7C-dX-PWr" userLabel="Mode Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fLY-PN-2HS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
                                         <connections>
                                             <action selector="FlashcardButton:" destination="jOA-5c-0li" eventType="touchUpInside" id="c2j-BH-YKI"/>
                                             <action selector="flashButton:" destination="jOA-5c-0li" eventType="touchUpInside" id="r6c-Mb-M9P"/>
-                                            <segue destination="I3G-OG-4oy" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="QZE-cl-iJF"/>
+                                            <segue destination="I3G-OG-4oy" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="gkn-U0-u5s"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,7 +140,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.88627450980392153" green="0.90980392156862744" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93872390970038955" green="0.98637455552342723" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="pa7-ne-IHW" firstAttribute="bottom" secondItem="ueY-PK-lGd" secondAttribute="bottom" constant="221" id="7VW-OX-FU9"/>
                             <constraint firstItem="kT9-NP-oTN" firstAttribute="centerY" secondItem="fLY-PN-2HS" secondAttribute="centerY" id="Aab-aj-HR7"/>
@@ -194,7 +194,6 @@
                                 </state>
                                 <connections>
                                     <action selector="BackButton" destination="I3G-OG-4oy" eventType="touchUpInside" id="Fil-wS-vm5"/>
-                                    <action selector="BackButton:" destination="vru-RB-r1m" eventType="touchUpInside" id="ZKK-d2-6JI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,25 +212,284 @@
                     <navigationItem key="navigationItem" id="n8M-bR-vqe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="459-g2-w13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="vru-RB-r1m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="769.56521739130437" y="888.58695652173924"/>
         </scene>
-        <!--Character Practice Controller Scene-->
+        <!--Character Practice Controller-->
         <scene sceneID="UwD-F4-eaa">
             <objects>
-                <viewController id="tUm-pW-PTu" userLabel="Character Practice Controller Scene" sceneMemberID="viewController">
+                <viewController id="tUm-pW-PTu" userLabel="Character Practice Controller" customClass="CharPracticeController" customModule="gizou_hin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jxd-5X-WsS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.95686274509803915" green="0.88627450980392153" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lbp-I0-3Iz">
+                                <rect key="frame" x="132" y="36" width="150" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-9e-awv" userLabel="Correct">
+                                <rect key="frame" x="20" y="690" width="145" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.59607843140000005" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEC-PT-fyX" userLabel="Incorrect">
+                                <rect key="frame" x="270" y="690" width="138" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.59607843140000005" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqk-Ao-Qkn" userLabel="progress">
+                                <rect key="frame" x="207" y="42" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hchar0a" translatesAutoresizingMaskIntoConstraints="NO" id="HzU-gU-FTZ" userLabel="char_image">
+                                <rect key="frame" x="74.666666666666686" y="97" width="265" height="265"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv8-Ua-jkt" userLabel="Show answer">
+                                <rect key="frame" x="176" y="695.66666666666663" width="63" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-xZ-s5Y">
+                                <rect key="frame" x="138" y="629" width="138" height="40"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <state key="normal" title="Reveal answer">
+                                    <color key="titleColor" red="0.33333333329999998" green="0.80784313730000001" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnswer:" destination="tUm-pW-PTu" eventType="touchUpInside" id="BMM-r4-1RF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWt-rf-ncV" userLabel="Exit">
+                                <rect key="frame" x="10" y="21" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.95686274510000002" green="0.59607843140000005" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" backgroundImage="x.circle" catalog="system">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.59607843140000005" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="wkb-65-5r4" eventType="touchUpInside" id="SIh-st-pMS"/>
+                                    <action selector="goBack:" destination="tUm-pW-PTu" eventType="touchUpInside" id="ZTK-xk-rz2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JFv-cS-cGU">
+                                <rect key="frame" x="150.66666666666666" y="565" width="112.66666666666666" height="34"/>
+                                <color key="textColor" red="0.36078431370000003" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="tUm-pW-PTu" eventType="valueChanged" id="SNj-RE-BZW"/>
+                                    <action selector="submitAnswer:" destination="tUm-pW-PTu" eventType="primaryActionTriggered" id="ByA-iS-K7i"/>
+                                    <outlet property="delegate" destination="tUm-pW-PTu" id="BOS-ac-cWO"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Practice drawing the character here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6wV-XO-2Ed">
+                                <rect key="frame" x="79" y="378" width="256.66666666666669" height="157"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.90980392156862744" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6wV-XO-2Ed" firstAttribute="leading" secondItem="6vk-7Q-n12" secondAttribute="leading" constant="79" id="5UE-kb-Mdh"/>
+                            <constraint firstItem="lbp-I0-3Iz" firstAttribute="top" secondItem="6vk-7Q-n12" secondAttribute="top" constant="36" id="CbB-DB-L2J"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="trailing" secondItem="6wV-XO-2Ed" secondAttribute="trailing" constant="78.329999999999998" id="Ec2-yW-G0n"/>
+                            <constraint firstItem="yIc-xZ-s5Y" firstAttribute="leading" secondItem="6vk-7Q-n12" secondAttribute="leading" constant="138" id="KQn-lk-FrR"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="bottom" secondItem="zEC-PT-fyX" secondAttribute="bottom" constant="20" id="KV4-2n-tfF"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="trailing" secondItem="Yv8-Ua-jkt" secondAttribute="trailing" constant="175" id="MbU-Tn-6AG"/>
+                            <constraint firstItem="HzU-gU-FTZ" firstAttribute="top" secondItem="lbp-I0-3Iz" secondAttribute="bottom" constant="59" id="N63-vE-Jt7"/>
+                            <constraint firstItem="Yv8-Ua-jkt" firstAttribute="leading" secondItem="6vk-7Q-n12" secondAttribute="leading" constant="176" id="NCQ-YC-8bY"/>
+                            <constraint firstItem="HzU-gU-FTZ" firstAttribute="centerX" secondItem="Jxd-5X-WsS" secondAttribute="centerX" id="OL3-gS-ldQ"/>
+                            <constraint firstItem="bqk-Ao-Qkn" firstAttribute="centerX" secondItem="Jxd-5X-WsS" secondAttribute="centerX" id="PJS-8u-ihg"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="trailing" secondItem="yIc-xZ-s5Y" secondAttribute="trailing" constant="138" id="ULu-Gv-WtN"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="bottom" secondItem="ipY-9e-awv" secondAttribute="bottom" constant="20" id="Yho-9T-CK1"/>
+                            <constraint firstItem="JFv-cS-cGU" firstAttribute="centerX" secondItem="Jxd-5X-WsS" secondAttribute="centerX" id="c9x-Am-pxP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lbp-I0-3Iz" secondAttribute="trailing" constant="112" id="ic9-D2-xzA"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="bottom" secondItem="Yv8-Ua-jkt" secondAttribute="bottom" constant="40.333333333333371" id="icT-mg-gUP"/>
+                            <constraint firstItem="ipY-9e-awv" firstAttribute="leading" secondItem="6vk-7Q-n12" secondAttribute="leading" constant="20" id="lJe-MV-5jw"/>
+                            <constraint firstItem="yIc-xZ-s5Y" firstAttribute="top" secondItem="JFv-cS-cGU" secondAttribute="bottom" constant="30" id="lgW-il-XKH"/>
+                            <constraint firstItem="zEC-PT-fyX" firstAttribute="leading" secondItem="6vk-7Q-n12" secondAttribute="leading" constant="270" id="pJB-CE-H7q"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="trailing" secondItem="ipY-9e-awv" secondAttribute="trailing" constant="249" id="rpW-na-Jjw"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="trailing" secondItem="zEC-PT-fyX" secondAttribute="trailing" constant="6" id="syy-fe-uai"/>
+                            <constraint firstItem="6vk-7Q-n12" firstAttribute="bottom" secondItem="yIc-xZ-s5Y" secondAttribute="bottom" constant="67" id="tdl-Oj-pxR"/>
+                            <constraint firstItem="6wV-XO-2Ed" firstAttribute="top" secondItem="HzU-gU-FTZ" secondAttribute="bottom" constant="16" id="uI7-H4-fnq"/>
+                            <constraint firstItem="bqk-Ao-Qkn" firstAttribute="top" secondItem="lbp-I0-3Iz" secondAttribute="bottom" constant="4" id="veK-Qb-jzU"/>
+                            <constraint firstItem="lbp-I0-3Iz" firstAttribute="leading" secondItem="Jxd-5X-WsS" secondAttribute="leadingMargin" constant="112" id="wIi-mc-u8E"/>
+                            <constraint firstItem="lbp-I0-3Iz" firstAttribute="centerX" secondItem="Jxd-5X-WsS" secondAttribute="centerX" id="xFm-qi-DVQ"/>
+                            <constraint firstItem="JFv-cS-cGU" firstAttribute="top" secondItem="6wV-XO-2Ed" secondAttribute="bottom" constant="30" id="zp3-d7-aIS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6vk-7Q-n12"/>
                     </view>
                     <navigationItem key="navigationItem" id="wVo-mG-BaV"/>
+                    <connections>
+                        <outlet property="charOnScreen" destination="HzU-gU-FTZ" id="Fcu-KM-AIw"/>
+                        <outlet property="numCorrect" destination="ipY-9e-awv" id="0HG-Mc-S5b"/>
+                        <outlet property="numIncorrect" destination="zEC-PT-fyX" id="eDi-jP-mLP"/>
+                        <outlet property="progress" destination="lbp-I0-3Iz" id="LhT-d7-RWA"/>
+                        <outlet property="progressBar" destination="bqk-Ao-Qkn" id="4NM-K1-aeq"/>
+                        <outlet property="revealAnswer" destination="Yv8-Ua-jkt" id="cfY-zt-JSB"/>
+                        <outlet property="userInput" destination="JFv-cS-cGU" id="ddd-PA-dEO"/>
+                        <segue destination="ioe-Iz-6UW" kind="presentation" identifier="goToWinScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="fzS-1G-cPi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29f-yG-jxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wkb-65-5r4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="395"/>
+            <point key="canvasLocation" x="2357.971014492754" y="394.56521739130437"/>
+        </scene>
+        <!--Scorecard-->
+        <scene sceneID="5AV-LU-Lia">
+            <objects>
+                <viewController id="ioe-Iz-6UW" userLabel="Scorecard" customClass="ScorecardViewController" customModule="gizou_hin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nmx-rs-UBF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhv-yN-Qpa">
+                                <rect key="frame" x="70" y="238" width="200" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt2-eR-IaQ">
+                                <rect key="frame" x="70" y="357.33333333333331" width="227" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jiggle" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-bs-9Ph">
+                                <rect key="frame" x="263" y="20" width="131" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果を見てみましょう〜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSv-9G-5qN" userLabel="jiggle text">
+                                <rect key="frame" x="39" y="65" width="231" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
+                                <color key="textColor" red="0.99607843137254903" green="0.63137254901960782" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy3-HU-d65">
+                                <rect key="frame" x="138" y="562" width="138" height="46"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="z7C-dX-PWr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4PL-TA-X9q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaz-2A-WsE">
+                                <rect key="frame" x="54" y="479" width="306" height="45"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Practice Missed Characters">
+                                    <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="repeatChars:" destination="ioe-Iz-6UW" eventType="touchUpInside" id="gQy-Gn-rya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yhv-yN-Qpa" firstAttribute="top" secondItem="2hL-vR-jYH" secondAttribute="top" constant="238" id="0Gq-Mz-Gkv"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="dSv-9G-5qN" secondAttribute="trailing" constant="144" id="509-cF-hDf"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="Vt2-eR-IaQ" secondAttribute="trailing" constant="117" id="8JA-sN-N8S"/>
+                            <constraint firstItem="Vt2-eR-IaQ" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="70" id="DaP-Rf-xOp"/>
+                            <constraint firstItem="Vt2-eR-IaQ" firstAttribute="top" secondItem="Yhv-yN-Qpa" secondAttribute="bottom" constant="88" id="PLF-PG-mrI"/>
+                            <constraint firstItem="eaz-2A-WsE" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="54" id="PYO-58-23Y"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="eaz-2A-WsE" secondAttribute="trailing" constant="54" id="Phv-4K-1lE"/>
+                            <constraint firstItem="Vt2-eR-IaQ" firstAttribute="top" secondItem="Yhv-yN-Qpa" secondAttribute="bottom" constant="88" id="WLJ-sQ-PTM"/>
+                            <constraint firstItem="hy3-HU-d65" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="138" id="cXS-XQ-dQb"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="hy3-HU-d65" secondAttribute="trailing" constant="138" id="d5x-xG-oup"/>
+                            <constraint firstItem="eaz-2A-WsE" firstAttribute="top" secondItem="Vt2-eR-IaQ" secondAttribute="bottom" constant="90.329999999999998" id="eDj-W5-kTq"/>
+                            <constraint firstItem="Yhv-yN-Qpa" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="70" id="f3h-r5-rZI"/>
+                            <constraint firstItem="dSv-9G-5qN" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="39" id="fqd-LN-Lpz"/>
+                            <constraint firstItem="hy3-HU-d65" firstAttribute="top" secondItem="eaz-2A-WsE" secondAttribute="bottom" constant="38" id="m4q-Va-esy"/>
+                            <constraint firstItem="dSv-9G-5qN" firstAttribute="top" secondItem="2hL-vR-jYH" secondAttribute="top" constant="65" id="rJU-Ys-nw3"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="Yhv-yN-Qpa" secondAttribute="trailing" constant="144" id="s9c-ee-cbJ"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="bottom" secondItem="hy3-HU-d65" secondAttribute="bottom" constant="128" id="yKH-mF-aWQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2hL-vR-jYH"/>
+                    </view>
+                    <connections>
+                        <outlet property="Correct" destination="Yhv-yN-Qpa" id="I6o-Mj-lug"/>
+                        <outlet property="Incorrect" destination="Vt2-eR-IaQ" id="xBf-P6-aGf"/>
+                        <outlet property="correct" destination="Yhv-yN-Qpa" id="zjQ-z3-ES5"/>
+                        <outlet property="incorrect" destination="Vt2-eR-IaQ" id="jrO-b7-uzb"/>
+                        <segue destination="tUm-pW-PTu" kind="presentation" identifier="practiceMissedChars" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="vsY-Ku-p2T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C36-lg-lRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357.971014492754" y="1148.6413043478262"/>
+        </scene>
+        <!--Confirm Quit-->
+        <scene sceneID="6zf-kP-AAV">
+            <objects>
+                <viewController id="ctu-RD-wFy" userLabel="Confirm Quit" customClass="QuitSceneController" customModule="gizou_hin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kt0-6D-tyZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-mo-P6C" userLabel="no outline">
+                                <rect key="frame" x="259" y="439" width="85" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline" translatesAutoresizingMaskIntoConstraints="NO" id="bRI-Yc-YRN" userLabel="big outline">
+                                <rect key="frame" x="72" y="82" width="270" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9do-Vy-Crw">
+                                <rect key="frame" x="90" y="489" width="49" height="45"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <state key="normal" title="YES">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-sJ-fCT">
+                                <rect key="frame" x="278" y="490" width="47" height="45"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <state key="normal" title="NO">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ExitButton" destination="ctu-RD-wFy" eventType="touchUpInside" id="lPr-8y-QyI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to quit?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2n-Sv-ujR">
+                                <rect key="frame" x="88" y="200.66666666666666" width="238" height="70.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline" translatesAutoresizingMaskIntoConstraints="NO" id="Ftn-6l-uOM" userLabel="yes outline">
+                                <rect key="frame" x="72" y="439" width="85" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9do-Vy-Crw" firstAttribute="leading" secondItem="lYN-G7-vzu" secondAttribute="leading" constant="90" id="Ahh-dr-dip"/>
+                            <constraint firstItem="6Nk-sJ-fCT" firstAttribute="leading" secondItem="lYN-G7-vzu" secondAttribute="leading" constant="278" id="LBi-CT-pAA"/>
+                            <constraint firstItem="lYN-G7-vzu" firstAttribute="trailing" secondItem="9do-Vy-Crw" secondAttribute="trailing" constant="275" id="NIt-kp-1fW"/>
+                            <constraint firstItem="lYN-G7-vzu" firstAttribute="bottom" secondItem="6Nk-sJ-fCT" secondAttribute="bottom" constant="201" id="RsJ-fz-36L"/>
+                            <constraint firstItem="lYN-G7-vzu" firstAttribute="trailing" secondItem="6Nk-sJ-fCT" secondAttribute="trailing" constant="89" id="WJz-fN-JeF"/>
+                            <constraint firstItem="lYN-G7-vzu" firstAttribute="trailing" secondItem="J2n-Sv-ujR" secondAttribute="trailing" constant="88" id="fqT-PG-gPG"/>
+                            <constraint firstItem="J2n-Sv-ujR" firstAttribute="leading" secondItem="lYN-G7-vzu" secondAttribute="leading" constant="88" id="h0s-Gf-UwK"/>
+                            <constraint firstItem="lYN-G7-vzu" firstAttribute="bottom" secondItem="J2n-Sv-ujR" secondAttribute="bottom" constant="465" id="oua-Kv-9ym"/>
+                            <constraint firstItem="lYN-G7-vzu" firstAttribute="bottom" secondItem="9do-Vy-Crw" secondAttribute="bottom" constant="202" id="xX9-No-Gej"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lYN-G7-vzu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPj-bn-kAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3227.536231884058" y="68.478260869565219"/>
         </scene>
         <!--Load Practice Controller-->
         <scene sceneID="aVT-sv-mq3">
@@ -245,10 +503,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UJ2-GD-SsR">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1310"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1725"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48R-40-1sz">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIRAGANA   ひらがな" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIO-be-Aaz" userLabel="hir title">
                                                         <rect key="frame" x="28.999999999999986" y="60" width="221.66666666666663" height="17"/>
@@ -262,13 +520,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deselect all" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9H-t2-Wgs" userLabel="hirAll">
                                                         <rect key="frame" x="63" y="94" width="78" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                                        <color key="textColor" red="0.72177954165232661" green="0.55061211389845666" blue="0.87208518401015223" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add diacritical marks (i.e. &quot; , º)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-7x-0Lp">
-                                                        <rect key="frame" x="62.000000000000014" y="620" width="184.33333333333337" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.98768466710000002" green="0.65642184020000005" blue="0.077894292769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0T-Xj-ceE">
@@ -277,10 +529,10 @@
                                                             <constraint firstAttribute="height" constant="26" id="Xun-eA-YiP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" red="0.99607843139999996" green="0.58823529409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.99550157790000005" green="0.54586976769999995" blue="0.093762807549999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiragana_chart" translatesAutoresizingMaskIntoConstraints="NO" id="jld-ou-ZU1">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiragana1" translatesAutoresizingMaskIntoConstraints="NO" id="jld-ou-ZU1">
                                                         <rect key="frame" x="52" y="122" width="338" height="489"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="489" id="zml-eK-Oix"/>
@@ -293,7 +545,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                         <state key="normal" title="Back">
-                                                            <color key="titleColor" red="0.99607843139999996" green="0.58823529409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="titleColor" red="0.99578791860000004" green="0.47351354359999998" blue="0.297968179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="BackButton" destination="Yck-i1-USA" eventType="touchUpInside" id="NqJ-Il-pnp"/>
@@ -321,7 +573,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="y01-Nw-Fhc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ln5-Vk-497" userLabel="row2h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ln5-Vk-497" userLabel="row2h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="168" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -332,7 +584,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="Msp-jd-QCL"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6u-ns-al3" userLabel="row4h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6u-ns-al3" userLabel="row4h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="258" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -343,7 +595,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="5yg-qu-Ou8"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eep-vL-Az9" userLabel="row3h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eep-vL-Az9" userLabel="row3h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="213" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,7 +606,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="iFM-dF-ybU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-FD-4OV" userLabel="row5h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-FD-4OV" userLabel="row5h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="302" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -365,7 +617,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="JnC-If-LOG"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7E-Ua-x9i" userLabel="row6h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7E-Ua-x9i" userLabel="row6h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="347" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -376,7 +628,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="OWd-3G-sQN"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0m-ZH-8rU" userLabel="row7h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0m-ZH-8rU" userLabel="row7h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="392" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -387,7 +639,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="DhZ-sR-muY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e0-ke-aFj" userLabel="row8h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e0-ke-aFj" userLabel="row8h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="436" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -398,7 +650,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="fD4-N8-CTP"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-Ai-5e7" userLabel="row9h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-Ai-5e7" userLabel="row9h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="480" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -409,7 +661,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="Dbr-GW-1r1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU4-e7-MoW" userLabel="row10h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU4-e7-MoW" userLabel="row10h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="525" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -420,7 +672,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="9jm-tf-MvC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGj-Wu-6J3" userLabel="row11h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGj-Wu-6J3" userLabel="row11h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="569" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -431,7 +683,7 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="iZM-XT-dBY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yK-AF-3oc" userLabel="row12h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yK-AF-3oc" userLabel="row12h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="611.66666666666663" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -442,20 +694,61 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="89v-B6-H7I"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yT-H7-VOp" userLabel="row13h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="660" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="OOJ-Ib-d5A"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3N-jv-BwZ" userLabel="row14h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="702" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="ehw-Ba-egO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20a-8R-wxu" userLabel="row15h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="744" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="0Ut-xr-A2v"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-7x-75T" userLabel="row16h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="786" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="zuS-gV-5a1"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.91372549020000005" green="0.8862745098" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="hfl-7x-0Lp" firstAttribute="top" secondItem="jld-ou-ZU1" secondAttribute="bottom" constant="9" id="6Zh-HA-Xnt"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i0T-Xj-ceE" secondAttribute="trailing" constant="252" id="E0h-5G-3gS"/>
                                                     <constraint firstItem="jld-ou-ZU1" firstAttribute="top" secondItem="i0T-Xj-ceE" secondAttribute="bottom" constant="41" id="Ig1-63-Do0"/>
-                                                    <constraint firstItem="hfl-7x-0Lp" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="62" id="S70-2f-Qdb"/>
                                                     <constraint firstItem="NDB-Zf-bcG" firstAttribute="top" secondItem="48R-40-1sz" secondAttribute="top" constant="7" id="VPJ-gF-ZfO"/>
                                                     <constraint firstItem="zIO-be-Aaz" firstAttribute="top" secondItem="NDB-Zf-bcG" secondAttribute="bottom" constant="15" id="W1C-Zu-hhh"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D9H-t2-Wgs" secondAttribute="trailing" constant="223" id="XIm-ug-K5g"/>
                                                     <constraint firstItem="jld-ou-ZU1" firstAttribute="top" secondItem="zIO-be-Aaz" secondAttribute="bottom" constant="45" id="XxW-Sv-jSb"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zIO-be-Aaz" secondAttribute="trailing" constant="20" symbolic="YES" id="aS0-IN-2vJ"/>
                                                     <constraint firstItem="i0T-Xj-ceE" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="151" id="eNM-92-Oh0"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hfl-7x-0Lp" secondAttribute="trailing" constant="167.66999999999999" id="erR-Oc-Jlw"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NDB-Zf-bcG" secondAttribute="trailing" constant="20" symbolic="YES" id="ex6-id-xyI"/>
                                                     <constraint firstAttribute="trailing" secondItem="jld-ou-ZU1" secondAttribute="trailing" constant="24" id="fmM-j0-gXZ"/>
                                                     <constraint firstItem="NDB-Zf-bcG" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="11" id="gch-LL-CaK"/>
@@ -463,26 +756,20 @@
                                                     <constraint firstItem="jld-ou-ZU1" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="52" id="vPO-Lq-k0c"/>
                                                     <constraint firstItem="zIO-be-Aaz" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="29" id="vaI-nD-tKt"/>
                                                     <constraint firstItem="D9H-t2-Wgs" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="63" id="y5d-F9-5jG"/>
-                                                    <constraint firstAttribute="height" constant="650" id="ykx-Cn-gvH"/>
+                                                    <constraint firstAttribute="height" constant="850" id="ykx-Cn-gvH"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2Q-xV-ivt">
-                                                <rect key="frame" x="0.0" y="650" width="414" height="660"/>
+                                                <rect key="frame" x="0.0" y="850" width="414" height="875"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="はじめましょう !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szh-C5-Bal" userLabel="char speech">
-                                                        <rect key="frame" x="130" y="623" width="154" height="20"/>
+                                                        <rect key="frame" x="130" y="838" width="154" height="20"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
                                                         <color key="textColor" red="0.26928147670000002" green="0.079076282679999998" blue="0.05096270889" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add diacritical marks (i.e. &quot; , º)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDq-i3-Gay">
-                                                        <rect key="frame" x="61.000000000000014" y="563" width="184.33333333333337" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="katakana_chart" translatesAutoresizingMaskIntoConstraints="NO" id="Wfb-TI-R3l">
-                                                        <rect key="frame" x="51" y="65" width="338" height="489"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="katakana1" translatesAutoresizingMaskIntoConstraints="NO" id="Wfb-TI-R3l">
+                                                        <rect key="frame" x="50" y="76" width="338" height="489"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="489" id="6xK-dq-wRk"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="489" id="F8L-5l-MEK"/>
@@ -490,13 +777,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select all" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K59-wa-cS0" userLabel="katAll">
-                                                        <rect key="frame" x="62" y="37" width="61.666666666666657" height="19.666666666666671"/>
+                                                        <rect key="frame" x="61" y="48" width="61.666666666666657" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                                        <color key="textColor" red="0.72177954170000003" green="0.55061211389999998" blue="0.87208518400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.98768466710000002" green="0.65642184020000005" blue="0.077894292769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KATAKANA   カタカナ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPc-dd-NgR" userLabel="kat title">
-                                                        <rect key="frame" x="27.999999999999986" y="3" width="224.66666666666663" height="17"/>
+                                                        <rect key="frame" x="26.999999999999986" y="14" width="224.66666666666663" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="LQb-SN-lCb"/>
                                                         </constraints>
@@ -505,93 +792,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smK-qX-P0W">
-                                                        <rect key="frame" x="154" y="-3" width="10.666666666666657" height="26"/>
+                                                        <rect key="frame" x="153" y="8" width="10.666666666666657" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="26" id="RdG-Ke-s4g"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" red="0.99607843139999996" green="0.58823529409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" red="0.99587351079999997" green="0.56423437600000004" blue="0.33325725789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-eG-tYa" userLabel="row3k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="156" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="RZt-IC-dmg"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5P8-z5-yXH" userLabel="row6k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="290" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="TB4-9Q-UYv"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-SI-Zj9" userLabel="row12k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="555" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="8WB-bL-qVn"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWY-u6-aYl" userLabel="row4k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="201" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="8jh-pp-YmO"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-Rg-VPe" userLabel="row10k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="468" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="nUe-hB-bYQ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-4a-ROZ" userLabel="row1k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="67" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="4Zx-X6-RJD"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9x-23-xhn" userLabel="row2k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="111" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="tc1-05-hy9"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iId-G8-Rff" userLabel="allRows" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="31" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="41" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -601,8 +811,52 @@
                                                             <action selector="checkAllKat:" destination="Yck-i1-USA" eventType="touchUpInside" id="Kc4-zf-t0n"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-1S-ECl" userLabel="row5k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="245" width="30" height="34"/>
+                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-4a-ROZ" userLabel="row1k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="77" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="4Zx-X6-RJD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9x-23-xhn" userLabel="row2k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="121" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="tc1-05-hy9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-eG-tYa" userLabel="row3k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="166" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="RZt-IC-dmg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWY-u6-aYl" userLabel="row4k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="211" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="8jh-pp-YmO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-1S-ECl" userLabel="row5k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="255" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -612,30 +866,19 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="rZZ-Wq-epV"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-1q-XT6" userLabel="row8k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="379" width="30" height="34"/>
+                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5P8-z5-yXH" userLabel="row6k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="300" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="mcu-0n-QUC"/>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="TB4-9Q-UYv"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-ja-mmO" userLabel="row9k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="423" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="5zv-Qu-uwG"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6L-dP-a1d" userLabel="row7k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="335" width="30" height="34"/>
+                                                    <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6L-dP-a1d" userLabel="row7k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="345" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -645,8 +888,41 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="4jl-cK-ft2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-V4-eup" userLabel="row11k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="17" y="512" width="30" height="34"/>
+                                                    <button opaque="NO" tag="25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-1q-XT6" userLabel="row8k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="389" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="mcu-0n-QUC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="26" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-ja-mmO" userLabel="row9k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="433" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="5zv-Qu-uwG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="27" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-Rg-VPe" userLabel="row10k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="478" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="nUe-hB-bYQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="28" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-V4-eup" userLabel="row11k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="522" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -656,29 +932,83 @@
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="4ra-da-Tz3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-RD-DjR">
-                                                        <rect key="frame" x="367" y="605" width="30" height="38"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                                        <state key="normal" title="Go">
-                                                            <color key="titleColor" red="0.99546033140000001" green="0.56575781110000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <button opaque="NO" tag="29" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-SI-Zj9" userLabel="row12k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="565" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="tUm-pW-PTu" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="VpC-Ia-ONC"/>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="8WB-bL-qVn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-8Z-r20" userLabel="row13k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="610" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="keO-ja-DAu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-Tr-sqf" userLabel="row14k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="655" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="SuU-jA-qLJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxI-KE-py6" userLabel="row16k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="750" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="GTL-7G-fk2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-RD-DjR">
+                                                        <rect key="frame" x="367" y="820" width="30" height="38"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <state key="normal" title="Go">
+                                                            <color key="titleColor" red="0.99578791860000004" green="0.47351354359999998" blue="0.297968179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="goButton:" destination="Yck-i1-USA" eventType="touchUpInside" id="JMA-sK-hQd"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="char" translatesAutoresizingMaskIntoConstraints="NO" id="mlJ-mO-ec0">
-                                                        <rect key="frame" x="3" y="586" width="119" height="94"/>
+                                                        <rect key="frame" x="3" y="807" width="119" height="76"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="119" id="A70-ui-uKM"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnE-zo-QCm" userLabel="row15k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="701" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="Zfi-UE-kTy"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.91372549020000005" green="0.8862745098" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="GDq-i3-Gay" secondAttribute="bottom" constant="80" id="3ms-Mp-7Gs"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Wfb-TI-R3l" secondAttribute="trailing" constant="25" id="7wG-U0-wae"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mlJ-mO-ec0" secondAttribute="bottom" constant="-20" id="A3v-tw-4Uh"/>
-                                                    <constraint firstItem="mlJ-mO-ec0" firstAttribute="top" secondItem="Wfb-TI-R3l" secondAttribute="bottom" constant="32" id="CZC-R1-dJt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Wfb-TI-R3l" secondAttribute="trailing" constant="26" id="7wG-U0-wae"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mlJ-mO-ec0" secondAttribute="bottom" constant="-8" id="A3v-tw-4Uh"/>
+                                                    <constraint firstItem="mlJ-mO-ec0" firstAttribute="top" secondItem="Wfb-TI-R3l" secondAttribute="bottom" constant="242" id="CZC-R1-dJt"/>
                                                     <constraint firstItem="Wfb-TI-R3l" firstAttribute="top" secondItem="smK-qX-P0W" secondAttribute="bottom" constant="42" id="E13-q1-YXT"/>
                                                     <constraint firstItem="Wfb-TI-R3l" firstAttribute="top" secondItem="sPc-dd-NgR" secondAttribute="bottom" constant="45" id="GWS-Ib-Xvt"/>
                                                     <constraint firstItem="f6A-RD-DjR" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="367" id="GtN-XO-Uab"/>
@@ -687,19 +1017,16 @@
                                                     <constraint firstItem="K59-wa-cS0" firstAttribute="top" secondItem="smK-qX-P0W" secondAttribute="bottom" constant="14" id="OWY-8g-ekr"/>
                                                     <constraint firstAttribute="bottom" secondItem="Szh-C5-Bal" secondAttribute="bottom" constant="17" id="PtC-gY-igO"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K59-wa-cS0" secondAttribute="trailing" constant="213" id="ULe-29-AiE"/>
-                                                    <constraint firstItem="GDq-i3-Gay" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="61" id="Wce-Gf-L9D"/>
                                                     <constraint firstAttribute="trailing" secondItem="Szh-C5-Bal" secondAttribute="trailing" constant="130" id="XXN-XY-wcA"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sPc-dd-NgR" secondAttribute="trailing" constant="146" id="XvQ-GJ-3g4"/>
-                                                    <constraint firstItem="K59-wa-cS0" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="62" id="b7H-7N-hpy"/>
+                                                    <constraint firstItem="K59-wa-cS0" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="61" id="b7H-7N-hpy"/>
                                                     <constraint firstItem="mlJ-mO-ec0" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="3" id="dXo-Ap-DqQ"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f6A-RD-DjR" secondAttribute="trailing" constant="17" id="fcC-Rm-u4s"/>
-                                                    <constraint firstItem="sPc-dd-NgR" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="28" id="fdC-WO-VBa"/>
-                                                    <constraint firstItem="GDq-i3-Gay" firstAttribute="top" secondItem="Wfb-TI-R3l" secondAttribute="bottom" constant="9" id="gbN-Xg-1Ta"/>
+                                                    <constraint firstItem="sPc-dd-NgR" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="27" id="fdC-WO-VBa"/>
                                                     <constraint firstItem="Szh-C5-Bal" firstAttribute="leading" secondItem="mlJ-mO-ec0" secondAttribute="trailing" constant="8" id="i9I-BG-ybv"/>
                                                     <constraint firstItem="Szh-C5-Bal" firstAttribute="leading" secondItem="mlJ-mO-ec0" secondAttribute="trailing" constant="8" id="mei-rf-B6k"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GDq-i3-Gay" secondAttribute="trailing" constant="160.66999999999999" id="wx6-yM-Uar"/>
-                                                    <constraint firstAttribute="height" constant="660" id="yQR-fj-IdS"/>
-                                                    <constraint firstItem="smK-qX-P0W" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="154" id="zxg-UI-vza"/>
+                                                    <constraint firstAttribute="height" constant="875" id="yQR-fj-IdS"/>
+                                                    <constraint firstItem="smK-qX-P0W" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="153" id="zxg-UI-vza"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -716,7 +1043,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="6TP-Tm-oYy"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.88627450980392153" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.98378628489999997" green="0.88639926692690785" blue="0.66510317843137845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="e9o-SI-GMv" firstAttribute="bottom" secondItem="wsA-kV-CKk" secondAttribute="bottom" id="4Me-yQ-Ebh"/>
                             <constraint firstItem="e9o-SI-GMv" firstAttribute="leading" secondItem="wsA-kV-CKk" secondAttribute="leading" id="Afa-bD-Qlt"/>
@@ -756,6 +1083,15 @@
                         <outletCollection property="katButtons" destination="G0D-ja-mmO" collectionClass="NSMutableArray" id="kCx-Md-3j3"/>
                         <outletCollection property="katButtons" destination="L6L-dP-a1d" collectionClass="NSMutableArray" id="oN4-Dl-97H"/>
                         <outletCollection property="katButtons" destination="Ubg-V4-eup" collectionClass="NSMutableArray" id="j2p-KR-g72"/>
+                        <outletCollection property="katButtons" destination="9SK-8Z-r20" collectionClass="NSMutableArray" id="eAQ-RK-Hup"/>
+                        <outletCollection property="katButtons" destination="QxI-KE-py6" collectionClass="NSMutableArray" id="Zn1-u1-Y3R"/>
+                        <outletCollection property="katButtons" destination="rnE-zo-QCm" collectionClass="NSMutableArray" id="4hA-4n-ot9"/>
+                        <outletCollection property="katButtons" destination="pcz-Tr-sqf" collectionClass="NSMutableArray" id="DfO-Om-YVU"/>
+                        <outletCollection property="hirButtons" destination="3yT-H7-VOp" collectionClass="NSMutableArray" id="mae-pn-nXR"/>
+                        <outletCollection property="hirButtons" destination="n3N-jv-BwZ" collectionClass="NSMutableArray" id="t1h-Yp-F9x"/>
+                        <outletCollection property="hirButtons" destination="20a-8R-wxu" collectionClass="NSMutableArray" id="be7-A3-djq"/>
+                        <outletCollection property="hirButtons" destination="8Oa-7x-75T" collectionClass="NSMutableArray" id="SMh-1T-F22"/>
+                        <segue destination="tUm-pW-PTu" kind="presentation" identifier="goToPractice" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4b2-4I-DpT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aue-RX-ekL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -763,13 +1099,21 @@
             <point key="canvasLocation" x="1524.6376811594205" y="125.54347826086958"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vsY-Ku-p2T"/>
+        <segue reference="4PL-TA-X9q"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bulb" width="203" height="186"/>
         <image name="char" width="132" height="76"/>
-        <image name="hiragana_chart" width="880" height="1340"/>
-        <image name="katakana_chart" width="880" height="1340"/>
+        <image name="hchar0a" width="265" height="265"/>
+        <image name="hiragana1" width="880" height="1340"/>
+        <image name="jiggle" width="175" height="175"/>
+        <image name="katakana1" width="880" height="1340"/>
+        <image name="outline" width="500" height="500"/>
         <image name="pik" width="200" height="174"/>
         <image name="rectangle" catalog="system" width="128" height="93"/>
         <image name="squir" width="162" height="136"/>
+        <image name="x.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

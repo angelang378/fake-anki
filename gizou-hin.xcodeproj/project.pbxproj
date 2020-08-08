@@ -8,19 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0B0705CC24D4C7E30070F182 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0705CB24D4C7E30070F182 /* CheckBox.swift */; };
+		0B43C7FB24D7631400C4EB64 /* QuitSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B43C7FA24D7631400C4EB64 /* QuitSceneController.swift */; };
+		0B4AEA9F24DDE0CD005A6C43 /* Char.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FA3A424D5CBBF000A8E65 /* Char.swift */; };
+		0B4AEAA024DDE0D2005A6C43 /* CharPracticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B747F5824D6668000C793F1 /* CharPracticeController.swift */; };
+		0B4AEAA224DDE0DB005A6C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F3F24D34D790036E51D /* Main.storyboard */; };
+		0B4AEAA424DE215D005A6C43 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AEAA324DE215D005A6C43 /* ScorecardViewController.swift */; };
 		0B676F3A24D34D790036E51D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F3924D34D790036E51D /* AppDelegate.swift */; };
 		0B676F3C24D34D790036E51D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F3B24D34D790036E51D /* SceneDelegate.swift */; };
 		0B676F3E24D34D790036E51D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F3D24D34D790036E51D /* ViewController.swift */; };
-		0B676F4124D34D790036E51D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F3F24D34D790036E51D /* Main.storyboard */; };
 		0B676F4324D34D7A0036E51D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F4224D34D7A0036E51D /* Assets.xcassets */; };
 		0B676F4624D34D7A0036E51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F4424D34D7A0036E51D /* LaunchScreen.storyboard */; };
 		0B676F5224D376BB0036E51D /* LoadPracticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F5124D376BB0036E51D /* LoadPracticeController.swift */; };
 		0B676F5624D38DA90036E51D /* LoadFlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F5524D38DA90036E51D /* LoadFlashcardController.swift */; };
 		0B676F5824D3D28A0036E51D /* ChecklistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F5724D3D28A0036E51D /* ChecklistTableViewController.swift */; };
+		0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FA3A124D5CB15000A8E65 /* CharModel.swift */; };
+		0B969F5524D7C6A100B472F0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B969F5424D7C6A100B472F0 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B0705CB24D4C7E30070F182 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		0B43C7FA24D7631400C4EB64 /* QuitSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSceneController.swift; sourceTree = "<group>"; };
+		0B4AEAA324DE215D005A6C43 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
 		0B676F3624D34D790036E51D /* gizou-hin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gizou-hin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B676F3924D34D790036E51D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B676F3B24D34D790036E51D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +40,10 @@
 		0B676F5124D376BB0036E51D /* LoadPracticeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPracticeController.swift; sourceTree = "<group>"; };
 		0B676F5524D38DA90036E51D /* LoadFlashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFlashcardController.swift; sourceTree = "<group>"; };
 		0B676F5724D3D28A0036E51D /* ChecklistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewController.swift; sourceTree = "<group>"; };
+		0B747F5824D6668000C793F1 /* CharPracticeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharPracticeController.swift; sourceTree = "<group>"; };
+		0B8FA3A124D5CB15000A8E65 /* CharModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharModel.swift; sourceTree = "<group>"; };
+		0B8FA3A424D5CBBF000A8E65 /* Char.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Char.swift; sourceTree = "<group>"; };
+		0B969F5424D7C6A100B472F0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +76,33 @@
 		0B676F3824D34D790036E51D /* gizou-hin */ = {
 			isa = PBXGroup;
 			children = (
+				0B8FA3A324D5CB33000A8E65 /* View Controllers */,
 				0B676F3924D34D790036E51D /* AppDelegate.swift */,
 				0B676F3B24D34D790036E51D /* SceneDelegate.swift */,
-				0B676F3D24D34D790036E51D /* ViewController.swift */,
 				0B676F3F24D34D790036E51D /* Main.storyboard */,
 				0B676F4224D34D7A0036E51D /* Assets.xcassets */,
 				0B676F4424D34D7A0036E51D /* LaunchScreen.storyboard */,
 				0B676F4724D34D7A0036E51D /* Info.plist */,
+				0B0705CB24D4C7E30070F182 /* CheckBox.swift */,
+				0B8FA3A124D5CB15000A8E65 /* CharModel.swift */,
+				0B8FA3A424D5CBBF000A8E65 /* Char.swift */,
+			);
+			path = "gizou-hin";
+			sourceTree = "<group>";
+		};
+		0B8FA3A324D5CB33000A8E65 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B676F3D24D34D790036E51D /* ViewController.swift */,
 				0B676F5124D376BB0036E51D /* LoadPracticeController.swift */,
 				0B676F5524D38DA90036E51D /* LoadFlashcardController.swift */,
 				0B676F5724D3D28A0036E51D /* ChecklistTableViewController.swift */,
-				0B0705CB24D4C7E30070F182 /* CheckBox.swift */,
+				0B747F5824D6668000C793F1 /* CharPracticeController.swift */,
+				0B43C7FA24D7631400C4EB64 /* QuitSceneController.swift */,
+				0B969F5424D7C6A100B472F0 /* CustomTableViewCell.swift */,
+				0B4AEAA324DE215D005A6C43 /* ScorecardViewController.swift */,
 			);
-			path = "gizou-hin";
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4AEAA224DDE0DB005A6C43 /* Main.storyboard in Resources */,
 				0B676F4624D34D7A0036E51D /* LaunchScreen.storyboard in Resources */,
 				0B676F4324D34D7A0036E51D /* Assets.xcassets in Resources */,
-				0B676F4124D34D790036E51D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,10 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4AEAA024DDE0D2005A6C43 /* CharPracticeController.swift in Sources */,
 				0B676F5824D3D28A0036E51D /* ChecklistTableViewController.swift in Sources */,
+				0B4AEAA424DE215D005A6C43 /* ScorecardViewController.swift in Sources */,
+				0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */,
 				0B676F3E24D34D790036E51D /* ViewController.swift in Sources */,
 				0B676F3A24D34D790036E51D /* AppDelegate.swift in Sources */,
 				0B0705CC24D4C7E30070F182 /* CheckBox.swift in Sources */,
+				0B969F5524D7C6A100B472F0 /* CustomTableViewCell.swift in Sources */,
+				0B4AEA9F24DDE0CD005A6C43 /* Char.swift in Sources */,
+				0B43C7FB24D7631400C4EB64 /* QuitSceneController.swift in Sources */,
 				0B676F5224D376BB0036E51D /* LoadPracticeController.swift in Sources */,
 				0B676F5624D38DA90036E51D /* LoadFlashcardController.swift in Sources */,
 				0B676F3C24D34D790036E51D /* SceneDelegate.swift in Sources */,
