@@ -44,11 +44,11 @@
                                     <constraint firstAttribute="height" constant="62" id="ZvW-ez-ejU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
-                                <color key="textColor" red="0.79641240840000005" green="0.3362385631" blue="0.1292982996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.85488921399999995" green="0.29742574690000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.98378628489999997" green="0.94158644720819884" blue="0.88290670990057518" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0np-E5-5EY" secondAttribute="trailing" constant="151" id="24V-Nd-1na"/>
                             <constraint firstItem="h87-wm-zWZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Ik-QJ-7d1"/>
@@ -209,7 +209,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VBb-FF-RnZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="n8M-bR-vqe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="459-g2-w13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,16 +371,6 @@
                                 <color key="textColor" red="0.99607843137254903" green="0.63137254901960782" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy3-HU-d65">
-                                <rect key="frame" x="138" y="562" width="138" height="46"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
-                                <state key="normal" title="Main Menu">
-                                    <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="z7C-dX-PWr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4PL-TA-X9q"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaz-2A-WsE">
                                 <rect key="frame" x="54" y="479" width="306" height="45"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
@@ -392,13 +381,36 @@
                                     <action selector="repeatChars:" destination="ioe-Iz-6UW" eventType="touchUpInside" id="gQy-Gn-rya"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZf-zJ-stF">
+                                <rect key="frame" x="138" y="557" width="144" height="45"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Repeat Deck">
+                                    <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tUm-pW-PTu" kind="presentation" identifier="repeatDeck" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Zs3-uG-jmU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy3-HU-d65">
+                                <rect key="frame" x="138" y="631" width="138" height="46"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="z7C-dX-PWr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4PL-TA-X9q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yhv-yN-Qpa" firstAttribute="top" secondItem="2hL-vR-jYH" secondAttribute="top" constant="238" id="0Gq-Mz-Gkv"/>
                             <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="dSv-9G-5qN" secondAttribute="trailing" constant="144" id="509-cF-hDf"/>
                             <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="Vt2-eR-IaQ" secondAttribute="trailing" constant="117" id="8JA-sN-N8S"/>
+                            <constraint firstItem="jZf-zJ-stF" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="138" id="A4J-3y-bMM"/>
                             <constraint firstItem="Vt2-eR-IaQ" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="70" id="DaP-Rf-xOp"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="jZf-zJ-stF" secondAttribute="trailing" constant="132" id="HfF-XU-rGs"/>
+                            <constraint firstItem="jZf-zJ-stF" firstAttribute="top" secondItem="eaz-2A-WsE" secondAttribute="bottom" constant="33" id="OJN-m5-3FZ"/>
                             <constraint firstItem="Vt2-eR-IaQ" firstAttribute="top" secondItem="Yhv-yN-Qpa" secondAttribute="bottom" constant="88" id="PLF-PG-mrI"/>
                             <constraint firstItem="eaz-2A-WsE" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="54" id="PYO-58-23Y"/>
                             <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="eaz-2A-WsE" secondAttribute="trailing" constant="54" id="Phv-4K-1lE"/>
@@ -408,10 +420,10 @@
                             <constraint firstItem="eaz-2A-WsE" firstAttribute="top" secondItem="Vt2-eR-IaQ" secondAttribute="bottom" constant="90.329999999999998" id="eDj-W5-kTq"/>
                             <constraint firstItem="Yhv-yN-Qpa" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="70" id="f3h-r5-rZI"/>
                             <constraint firstItem="dSv-9G-5qN" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="39" id="fqd-LN-Lpz"/>
-                            <constraint firstItem="hy3-HU-d65" firstAttribute="top" secondItem="eaz-2A-WsE" secondAttribute="bottom" constant="38" id="m4q-Va-esy"/>
+                            <constraint firstItem="hy3-HU-d65" firstAttribute="top" secondItem="eaz-2A-WsE" secondAttribute="bottom" constant="107" id="m4q-Va-esy"/>
                             <constraint firstItem="dSv-9G-5qN" firstAttribute="top" secondItem="2hL-vR-jYH" secondAttribute="top" constant="65" id="rJU-Ys-nw3"/>
                             <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="Yhv-yN-Qpa" secondAttribute="trailing" constant="144" id="s9c-ee-cbJ"/>
-                            <constraint firstItem="2hL-vR-jYH" firstAttribute="bottom" secondItem="hy3-HU-d65" secondAttribute="bottom" constant="128" id="yKH-mF-aWQ"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="bottom" secondItem="hy3-HU-d65" secondAttribute="bottom" constant="59" id="yKH-mF-aWQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2hL-vR-jYH"/>
                     </view>

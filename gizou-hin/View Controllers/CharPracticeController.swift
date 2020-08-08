@@ -12,6 +12,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     
     var charRows: [Int]!
     
+    var charDeck = [Char]()
     var chars = [Char]()
     var currentChar = ""
     var char = Char()
@@ -38,6 +39,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpChars()
+        charDeck = chars
         total = chars.count
         nextChar()
         self.userInput.delegate = self
@@ -140,6 +142,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
             vc.numCorrect = correct
             vc.numIncorrect = incorrect
             vc.missedChars = wrongAnswers
+            vc.allChars = charDeck
         }
     }
     

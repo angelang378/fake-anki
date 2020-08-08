@@ -10,7 +10,6 @@ import UIKit
 
 class ScorecardViewController: ViewController {
     
-    
     @IBOutlet weak var correct: UILabel!
     var numCorrect = 0
     
@@ -18,10 +17,10 @@ class ScorecardViewController: ViewController {
     var numIncorrect = 0
     
     var missedChars = [Char]()
+    var allChars = [Char]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         correct.text = "Correct: \(numCorrect)"
         incorrect.text = "Incorrect: \(numIncorrect)"
     }
@@ -41,8 +40,12 @@ class ScorecardViewController: ViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? CharPracticeController {
-            vc.chars = missedChars.shuffled()
+            if segue.identifier == "practiceMissedChars" {
+                vc.chars = missedChars.shuffled()
+            }
+            else {
+                vc.chars = allChars.shuffled()
+            }
         }
     }
-    
 }
