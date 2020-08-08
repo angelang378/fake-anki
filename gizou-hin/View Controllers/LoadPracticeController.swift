@@ -34,6 +34,7 @@ class LoadPracticeController: UIViewController{
     }
     
     @IBAction func goButton(_ sender: UIButton) {
+        buttonRows = []
         var count = 0
         for button in hirButtons {
             if button.isChecked {

@@ -11,6 +11,6 @@ import Foundation
 class Char {
     
     var imageName = ""
-    var value = ""
+    var value : [String]! = []
     
 }

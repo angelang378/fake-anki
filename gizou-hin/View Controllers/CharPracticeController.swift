@@ -14,7 +14,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     
     var charDeck = [Char]()
     var chars = [Char]()
-    var currentChar = ""
+    var currentChar : [String]! = []
     var char = Char()
     var currentCharImage : UIImage?
     var firstView : Bool = true
@@ -93,7 +93,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     
     func checkAnswer() {
         if firstView {
-            if userInput.text == currentChar{
+            if currentChar.contains(userInput.text!.lowercased()){
                 correct += 1
                 numCorrect.text = "Correct: \(correct)"
                 rightAnswer()
@@ -102,7 +102,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
                 wrongAnswer()
             }
         } else{
-            if userInput.text == currentChar{
+            if currentChar.contains(userInput.text!.lowercased()){
                 rightAnswer()
             } else{
                 charOnScreen.shake()
@@ -130,7 +130,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func showAnswer(_ sender: Any) {
-        revealAnswer.text = currentChar
+        revealAnswer.text = currentChar[0]
         if self.firstView {
             wrongAnswer()
         }
@@ -148,7 +148,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     
 }
 
-//so
+//stackoverflow
 extension UIView {
     func shake() {
         let shakes = CAKeyframeAnimation(keyPath: "transform.translation.x")
