@@ -326,7 +326,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6vk-7Q-n12"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wVo-mG-BaV"/>
                     <connections>
                         <outlet property="charOnScreen" destination="HzU-gU-FTZ" id="Fcu-KM-AIw"/>
                         <outlet property="numCorrect" destination="ipY-9e-awv" id="0HG-Mc-S5b"/>
@@ -428,69 +427,6 @@
             </objects>
             <point key="canvasLocation" x="2357.971014492754" y="1148.6413043478262"/>
         </scene>
-        <!--Confirm Quit-->
-        <scene sceneID="6zf-kP-AAV">
-            <objects>
-                <viewController id="ctu-RD-wFy" userLabel="Confirm Quit" customClass="QuitSceneController" customModule="gizou_hin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kt0-6D-tyZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-mo-P6C" userLabel="no outline">
-                                <rect key="frame" x="259" y="439" width="85" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline" translatesAutoresizingMaskIntoConstraints="NO" id="bRI-Yc-YRN" userLabel="big outline">
-                                <rect key="frame" x="72" y="82" width="270" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9do-Vy-Crw">
-                                <rect key="frame" x="90" y="489" width="49" height="45"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                                <state key="normal" title="YES">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-sJ-fCT">
-                                <rect key="frame" x="278" y="490" width="47" height="45"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                                <state key="normal" title="NO">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="ExitButton" destination="ctu-RD-wFy" eventType="touchUpInside" id="lPr-8y-QyI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to quit?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2n-Sv-ujR">
-                                <rect key="frame" x="88" y="200.66666666666666" width="238" height="70.333333333333343"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline" translatesAutoresizingMaskIntoConstraints="NO" id="Ftn-6l-uOM" userLabel="yes outline">
-                                <rect key="frame" x="72" y="439" width="85" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="9do-Vy-Crw" firstAttribute="leading" secondItem="lYN-G7-vzu" secondAttribute="leading" constant="90" id="Ahh-dr-dip"/>
-                            <constraint firstItem="6Nk-sJ-fCT" firstAttribute="leading" secondItem="lYN-G7-vzu" secondAttribute="leading" constant="278" id="LBi-CT-pAA"/>
-                            <constraint firstItem="lYN-G7-vzu" firstAttribute="trailing" secondItem="9do-Vy-Crw" secondAttribute="trailing" constant="275" id="NIt-kp-1fW"/>
-                            <constraint firstItem="lYN-G7-vzu" firstAttribute="bottom" secondItem="6Nk-sJ-fCT" secondAttribute="bottom" constant="201" id="RsJ-fz-36L"/>
-                            <constraint firstItem="lYN-G7-vzu" firstAttribute="trailing" secondItem="6Nk-sJ-fCT" secondAttribute="trailing" constant="89" id="WJz-fN-JeF"/>
-                            <constraint firstItem="lYN-G7-vzu" firstAttribute="trailing" secondItem="J2n-Sv-ujR" secondAttribute="trailing" constant="88" id="fqT-PG-gPG"/>
-                            <constraint firstItem="J2n-Sv-ujR" firstAttribute="leading" secondItem="lYN-G7-vzu" secondAttribute="leading" constant="88" id="h0s-Gf-UwK"/>
-                            <constraint firstItem="lYN-G7-vzu" firstAttribute="bottom" secondItem="J2n-Sv-ujR" secondAttribute="bottom" constant="465" id="oua-Kv-9ym"/>
-                            <constraint firstItem="lYN-G7-vzu" firstAttribute="bottom" secondItem="9do-Vy-Crw" secondAttribute="bottom" constant="202" id="xX9-No-Gej"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lYN-G7-vzu"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lPj-bn-kAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3227.536231884058" y="68.478260869565219"/>
-        </scene>
         <!--Load Practice Controller-->
         <scene sceneID="aVT-sv-mq3">
             <objects>
@@ -525,18 +461,12 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0T-Xj-ceE">
                                                         <rect key="frame" x="151" y="55" width="10.666666666666657" height="26"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="26" id="Xun-eA-YiP"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                         <color key="textColor" red="0.99550157790000005" green="0.54586976769999995" blue="0.093762807549999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiragana1" translatesAutoresizingMaskIntoConstraints="NO" id="jld-ou-ZU1">
-                                                        <rect key="frame" x="52" y="122" width="338" height="489"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="489" id="zml-eK-Oix"/>
-                                                        </constraints>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="hiragana4" translatesAutoresizingMaskIntoConstraints="NO" id="gxq-xw-Sum" userLabel="hiragana_chart">
+                                                        <rect key="frame" x="63" y="124" width="314" height="712"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDB-Zf-bcG">
                                                         <rect key="frame" x="11" y="7" width="44" height="38"/>
@@ -563,7 +493,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRs-m1-9fC" userLabel="row1" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="124" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="147" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -574,7 +504,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ln5-Vk-497" userLabel="row2h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="168" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="191" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -585,7 +515,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6u-ns-al3" userLabel="row4h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="258" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="278" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -596,7 +526,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eep-vL-Az9" userLabel="row3h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="213" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="236" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -607,7 +537,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-FD-4OV" userLabel="row5h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="302" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="322" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -618,7 +548,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7E-Ua-x9i" userLabel="row6h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="347" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="363" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -629,7 +559,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0m-ZH-8rU" userLabel="row7h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="392" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="406" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -640,7 +570,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e0-ke-aFj" userLabel="row8h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="436" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="450" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -651,7 +581,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-Ai-5e7" userLabel="row9h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="480" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="491" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -662,7 +592,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU4-e7-MoW" userLabel="row10h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="525" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="534" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -673,7 +603,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGj-Wu-6J3" userLabel="row11h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="569" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="577" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -684,7 +614,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yK-AF-3oc" userLabel="row12h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="611.66666666666663" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="618.66666666666663" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -695,7 +625,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yT-H7-VOp" userLabel="row13h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="660" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="661" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -706,7 +636,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3N-jv-BwZ" userLabel="row14h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="702" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="705" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -717,7 +647,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20a-8R-wxu" userLabel="row15h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="744" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="750" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -728,7 +658,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-7x-75T" userLabel="row16h" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="18" y="786" width="30" height="34"/>
+                                                        <rect key="frame" x="18" y="796" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -741,43 +671,30 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i0T-Xj-ceE" secondAttribute="trailing" constant="252" id="E0h-5G-3gS"/>
-                                                    <constraint firstItem="jld-ou-ZU1" firstAttribute="top" secondItem="i0T-Xj-ceE" secondAttribute="bottom" constant="41" id="Ig1-63-Do0"/>
+                                                    <constraint firstItem="i0T-Xj-ceE" firstAttribute="top" secondItem="48R-40-1sz" secondAttribute="top" constant="55" id="3S3-Nl-yNl"/>
+                                                    <constraint firstItem="gxq-xw-Sum" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="63" id="3uG-a9-ElX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gxq-xw-Sum" secondAttribute="trailing" constant="37" id="EMl-Ba-t5x"/>
+                                                    <constraint firstItem="gxq-xw-Sum" firstAttribute="top" secondItem="D9H-t2-Wgs" secondAttribute="bottom" constant="10.33" id="UNf-J2-TlD"/>
                                                     <constraint firstItem="NDB-Zf-bcG" firstAttribute="top" secondItem="48R-40-1sz" secondAttribute="top" constant="7" id="VPJ-gF-ZfO"/>
                                                     <constraint firstItem="zIO-be-Aaz" firstAttribute="top" secondItem="NDB-Zf-bcG" secondAttribute="bottom" constant="15" id="W1C-Zu-hhh"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D9H-t2-Wgs" secondAttribute="trailing" constant="223" id="XIm-ug-K5g"/>
-                                                    <constraint firstItem="jld-ou-ZU1" firstAttribute="top" secondItem="zIO-be-Aaz" secondAttribute="bottom" constant="45" id="XxW-Sv-jSb"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zIO-be-Aaz" secondAttribute="trailing" constant="20" symbolic="YES" id="aS0-IN-2vJ"/>
-                                                    <constraint firstItem="i0T-Xj-ceE" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="151" id="eNM-92-Oh0"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D9H-t2-Wgs" secondAttribute="trailing" constant="20" symbolic="YES" id="act-n7-CTP"/>
+                                                    <constraint firstItem="D9H-t2-Wgs" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="63" id="c2b-K8-LjT"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NDB-Zf-bcG" secondAttribute="trailing" constant="20" symbolic="YES" id="ex6-id-xyI"/>
-                                                    <constraint firstAttribute="trailing" secondItem="jld-ou-ZU1" secondAttribute="trailing" constant="24" id="fmM-j0-gXZ"/>
                                                     <constraint firstItem="NDB-Zf-bcG" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="11" id="gch-LL-CaK"/>
-                                                    <constraint firstItem="D9H-t2-Wgs" firstAttribute="top" secondItem="i0T-Xj-ceE" secondAttribute="bottom" constant="13" id="mRz-gc-ezw"/>
-                                                    <constraint firstItem="jld-ou-ZU1" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="52" id="vPO-Lq-k0c"/>
+                                                    <constraint firstItem="D9H-t2-Wgs" firstAttribute="top" secondItem="zIO-be-Aaz" secondAttribute="bottom" constant="17" id="jff-Hb-dgh"/>
+                                                    <constraint firstItem="i0T-Xj-ceE" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="151" id="klF-V3-wr4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gxq-xw-Sum" secondAttribute="bottom" constant="14" id="rCw-cF-zHb"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i0T-Xj-ceE" secondAttribute="trailing" constant="20" symbolic="YES" id="v7f-Ee-vQO"/>
                                                     <constraint firstItem="zIO-be-Aaz" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="29" id="vaI-nD-tKt"/>
-                                                    <constraint firstItem="D9H-t2-Wgs" firstAttribute="leading" secondItem="48R-40-1sz" secondAttribute="leading" constant="63" id="y5d-F9-5jG"/>
                                                     <constraint firstAttribute="height" constant="850" id="ykx-Cn-gvH"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2Q-xV-ivt">
                                                 <rect key="frame" x="0.0" y="850" width="414" height="875"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="はじめましょう !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szh-C5-Bal" userLabel="char speech">
-                                                        <rect key="frame" x="130" y="838" width="154" height="20"/>
-                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
-                                                        <color key="textColor" red="0.26928147670000002" green="0.079076282679999998" blue="0.05096270889" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="katakana1" translatesAutoresizingMaskIntoConstraints="NO" id="Wfb-TI-R3l">
-                                                        <rect key="frame" x="50" y="76" width="338" height="489"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="489" id="6xK-dq-wRk"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="489" id="F8L-5l-MEK"/>
-                                                            <constraint firstAttribute="width" constant="338" id="nOQ-au-gKM"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select all" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K59-wa-cS0" userLabel="katAll">
-                                                        <rect key="frame" x="61" y="48" width="61.666666666666657" height="19.666666666666671"/>
+                                                        <rect key="frame" x="61" y="48" width="61.666666666666657" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                         <color key="textColor" red="0.98768466710000002" green="0.65642184020000005" blue="0.077894292769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -791,17 +708,26 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="katakana_chart2" translatesAutoresizingMaskIntoConstraints="NO" id="FNY-Vs-vXw" userLabel="hiragana_chart">
+                                                        <rect key="frame" x="61" y="81.666666666666629" width="316" height="712"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="712" id="MhB-A1-LRY"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="char" translatesAutoresizingMaskIntoConstraints="NO" id="mlJ-mO-ec0">
+                                                        <rect key="frame" x="3" y="807.66666666666674" width="119" height="76"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="119" id="A70-ui-uKM"/>
+                                                        </constraints>
+                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smK-qX-P0W">
                                                         <rect key="frame" x="153" y="8" width="10.666666666666657" height="26"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="26" id="RdG-Ke-s4g"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                         <color key="textColor" red="0.99587351079999997" green="0.56423437600000004" blue="0.33325725789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iId-G8-Rff" userLabel="allRows" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="41" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="42" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -812,7 +738,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-4a-ROZ" userLabel="row1k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="77" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="103" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -823,7 +749,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9x-23-xhn" userLabel="row2k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="121" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="144" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -834,7 +760,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-eG-tYa" userLabel="row3k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="166" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="189" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -845,7 +771,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWY-u6-aYl" userLabel="row4k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="211" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="234" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -856,7 +782,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-1S-ECl" userLabel="row5k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="255" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="275" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -867,7 +793,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5P8-z5-yXH" userLabel="row6k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="300" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="320" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -878,7 +804,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6L-dP-a1d" userLabel="row7k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="345" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="361" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -889,7 +815,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeN-1q-XT6" userLabel="row8k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="389" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="406" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -900,7 +826,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="26" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-ja-mmO" userLabel="row9k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="433" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="447" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -911,7 +837,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="27" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-Rg-VPe" userLabel="row10k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="478" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="489" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -922,7 +848,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="28" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-V4-eup" userLabel="row11k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="522" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="533" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -933,7 +859,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="29" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-SI-Zj9" userLabel="row12k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="565" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="575" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -944,7 +870,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-8Z-r20" userLabel="row13k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="610" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="617" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -955,7 +881,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-Tr-sqf" userLabel="row14k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="655" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="662" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -966,7 +892,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxI-KE-py6" userLabel="row16k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="750" width="30" height="34"/>
+                                                        <rect key="frame" x="12" y="755" width="30" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -974,6 +900,17 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="GTL-7G-fk2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnE-zo-QCm" userLabel="row15k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
+                                                        <rect key="frame" x="12" y="707" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="Zfi-UE-kTy"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-RD-DjR">
@@ -986,47 +923,37 @@
                                                             <action selector="goButton:" destination="Yck-i1-USA" eventType="touchUpInside" id="JMA-sK-hQd"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="char" translatesAutoresizingMaskIntoConstraints="NO" id="mlJ-mO-ec0">
-                                                        <rect key="frame" x="3" y="807" width="119" height="76"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="119" id="A70-ui-uKM"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnE-zo-QCm" userLabel="row15k" customClass="CheckBox" customModule="gizou_hin" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="701" width="30" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal">
-                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="checkbox:" destination="Yck-i1-USA" eventType="touchUpInside" id="Zfi-UE-kTy"/>
-                                                        </connections>
-                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="はじめましょう !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szh-C5-Bal" userLabel="char speech">
+                                                        <rect key="frame" x="143" y="829" width="184" height="20"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                        <color key="textColor" red="0.26928147670000002" green="0.079076282679999998" blue="0.05096270889" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Wfb-TI-R3l" secondAttribute="trailing" constant="26" id="7wG-U0-wae"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mlJ-mO-ec0" secondAttribute="bottom" constant="-8" id="A3v-tw-4Uh"/>
-                                                    <constraint firstItem="mlJ-mO-ec0" firstAttribute="top" secondItem="Wfb-TI-R3l" secondAttribute="bottom" constant="242" id="CZC-R1-dJt"/>
-                                                    <constraint firstItem="Wfb-TI-R3l" firstAttribute="top" secondItem="smK-qX-P0W" secondAttribute="bottom" constant="42" id="E13-q1-YXT"/>
-                                                    <constraint firstItem="Wfb-TI-R3l" firstAttribute="top" secondItem="sPc-dd-NgR" secondAttribute="bottom" constant="45" id="GWS-Ib-Xvt"/>
-                                                    <constraint firstItem="f6A-RD-DjR" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="367" id="GtN-XO-Uab"/>
-                                                    <constraint firstAttribute="bottom" secondItem="f6A-RD-DjR" secondAttribute="bottom" constant="17" id="MyD-9h-VlA"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="smK-qX-P0W" secondAttribute="trailing" constant="241.33000000000001" id="NiF-ep-YQj"/>
-                                                    <constraint firstItem="K59-wa-cS0" firstAttribute="top" secondItem="smK-qX-P0W" secondAttribute="bottom" constant="14" id="OWY-8g-ekr"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Szh-C5-Bal" secondAttribute="bottom" constant="17" id="PtC-gY-igO"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K59-wa-cS0" secondAttribute="trailing" constant="213" id="ULe-29-AiE"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Szh-C5-Bal" secondAttribute="trailing" constant="130" id="XXN-XY-wcA"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sPc-dd-NgR" secondAttribute="trailing" constant="146" id="XvQ-GJ-3g4"/>
-                                                    <constraint firstItem="K59-wa-cS0" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="61" id="b7H-7N-hpy"/>
-                                                    <constraint firstItem="mlJ-mO-ec0" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="3" id="dXo-Ap-DqQ"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f6A-RD-DjR" secondAttribute="trailing" constant="17" id="fcC-Rm-u4s"/>
-                                                    <constraint firstItem="sPc-dd-NgR" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="27" id="fdC-WO-VBa"/>
-                                                    <constraint firstItem="Szh-C5-Bal" firstAttribute="leading" secondItem="mlJ-mO-ec0" secondAttribute="trailing" constant="8" id="i9I-BG-ybv"/>
-                                                    <constraint firstItem="Szh-C5-Bal" firstAttribute="leading" secondItem="mlJ-mO-ec0" secondAttribute="trailing" constant="8" id="mei-rf-B6k"/>
-                                                    <constraint firstAttribute="height" constant="875" id="yQR-fj-IdS"/>
-                                                    <constraint firstItem="smK-qX-P0W" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="153" id="zxg-UI-vza"/>
+                                                    <constraint firstItem="FNY-Vs-vXw" firstAttribute="leading" secondItem="K59-wa-cS0" secondAttribute="leading" id="9dK-08-B1g"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sPc-dd-NgR" secondAttribute="trailing" constant="20" symbolic="YES" id="D6o-Qc-Ysl"/>
+                                                    <constraint firstItem="K59-wa-cS0" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="61" id="Dqj-ky-qj1"/>
+                                                    <constraint firstItem="K59-wa-cS0" firstAttribute="top" secondItem="sPc-dd-NgR" secondAttribute="bottom" constant="17" id="Gvx-WR-bNR"/>
+                                                    <constraint firstItem="smK-qX-P0W" firstAttribute="top" secondItem="y2Q-xV-ivt" secondAttribute="top" constant="8" id="Nog-9d-mEo"/>
+                                                    <constraint firstItem="mlJ-mO-ec0" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="3" id="Owf-0D-MzB"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K59-wa-cS0" secondAttribute="trailing" symbolic="YES" id="Qzm-Al-YFc"/>
+                                                    <constraint firstAttribute="height" constant="875" id="Sqq-rw-jyC"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="smK-qX-P0W" secondAttribute="trailing" constant="20" symbolic="YES" id="UXJ-Qn-hRl"/>
+                                                    <constraint firstItem="smK-qX-P0W" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="153" id="VXn-CS-pED"/>
+                                                    <constraint firstItem="Szh-C5-Bal" firstAttribute="leading" secondItem="mlJ-mO-ec0" secondAttribute="trailing" constant="21" id="YpF-DU-7S6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f6A-RD-DjR" secondAttribute="bottom" constant="17" id="afB-w5-6pP"/>
+                                                    <constraint firstItem="sPc-dd-NgR" firstAttribute="top" secondItem="y2Q-xV-ivt" secondAttribute="top" constant="14" id="jZx-Vm-fAx"/>
+                                                    <constraint firstItem="f6A-RD-DjR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="20" symbolic="YES" id="lfC-53-G52"/>
+                                                    <constraint firstItem="sPc-dd-NgR" firstAttribute="leading" secondItem="y2Q-xV-ivt" secondAttribute="leading" constant="27" id="pJz-l7-FTz"/>
+                                                    <constraint firstItem="mlJ-mO-ec0" firstAttribute="top" secondItem="FNY-Vs-vXw" secondAttribute="bottom" constant="14" id="pzJ-ed-5Ha"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Szh-C5-Bal" secondAttribute="bottom" constant="26" id="qHZ-Bn-EUn"/>
+                                                    <constraint firstItem="FNY-Vs-vXw" firstAttribute="centerY" secondItem="y2Q-xV-ivt" secondAttribute="centerY" id="qio-Ru-JFc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f6A-RD-DjR" secondAttribute="trailing" constant="17" id="rhi-GD-q7N"/>
+                                                    <constraint firstItem="FNY-Vs-vXw" firstAttribute="centerX" secondItem="Szh-C5-Bal" secondAttribute="centerX" constant="-16" id="sXF-DI-6mD"/>
+                                                    <constraint firstItem="FNY-Vs-vXw" firstAttribute="top" secondItem="K59-wa-cS0" secondAttribute="bottom" constant="13.333333333333329" id="wbV-as-Kds"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FNY-Vs-vXw" secondAttribute="trailing" constant="37" id="x8Q-MK-jdA"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1052,7 +979,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wsA-kV-CKk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gvu-I9-Yem"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="hirAll" destination="rRj-7V-sXC" id="PAy-Of-4Uf"/>
@@ -1100,17 +1026,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vsY-Ku-p2T"/>
-        <segue reference="4PL-TA-X9q"/>
+        <segue reference="4b2-4I-DpT"/>
+        <segue reference="Fx9-wH-yOz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bulb" width="203" height="186"/>
         <image name="char" width="132" height="76"/>
         <image name="hchar0a" width="265" height="265"/>
-        <image name="hiragana1" width="880" height="1340"/>
+        <image name="hiragana4" width="600" height="1605"/>
         <image name="jiggle" width="175" height="175"/>
-        <image name="katakana1" width="880" height="1340"/>
-        <image name="outline" width="500" height="500"/>
+        <image name="katakana_chart2" width="600" height="1603"/>
         <image name="pik" width="200" height="174"/>
         <image name="rectangle" catalog="system" width="128" height="93"/>
         <image name="squir" width="162" height="136"/>

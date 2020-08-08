@@ -81,6 +81,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
         numIncorrect.text = "Incorrect: \(incorrect)"
         charOnScreen.shake()
         self.firstView = false
+        wrongAnswers.append(char)
     }
     
     func rightAnswer(){
@@ -96,7 +97,6 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
                 rightAnswer()
             }
             else {
-                wrongAnswers.append(char)
                 wrongAnswer()
             }
         } else{

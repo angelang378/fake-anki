@@ -18,37 +18,45 @@ class CharModel {
     let rows = ["", "k", "s", "t", "n", "h", "m", "y", "r", "w", "n", "g", "z", "d", "b", "p"]
     
     var chosenChars = [Char]()
+    var prefix = "h"
+    var number = 0
     
     func getChars(sender:[Int]) -> [Char] {
         
         for num in sender {
-
-            if !notFive.contains(num){
+            number = num
+            if num > 16{
+                prefix = "k"
+                number -= 17
+            } else{
+                prefix = "h"
+            }
+            if !notFive.contains(number){
                 for letter in cols {
                     let char = Char()
-                    char.imageName = "hchar\(num)\(letter)"
-                    char.value = "\(rows[num])\(letter)"
+                    char.imageName = "\(prefix)char\(number)\(letter)"
+                    char.value = "\(rows[number])\(letter)"
                     chosenChars.append(char)
                     
                 }
-            } else if num == 7{
+            } else if number == 7{
                 for letter in row7 {
                     let char = Char()
-                    char.imageName = "hchar\(num)\(letter)"
-                    char.value = "\(rows[num])\(letter)"
+                    char.imageName = "\(prefix)char\(number)\(letter)"
+                    char.value = "\(rows[number])\(letter)"
                     chosenChars.append(char)
                 }
-            } else if num == 9{
+            } else if number == 9{
                 for letter in row9 {
                     let char = Char()
-                    char.imageName = "hchar\(num)\(letter)"
-                    char.value = "\(rows[num])\(letter)"
+                    char.imageName = "\(prefix)char\(number)\(letter)"
+                    char.value = "\(rows[number])\(letter)"
                     chosenChars.append(char)
                 }
             } else{
                 let char = Char()
-                char.imageName = "hchar\(num)n"
-                char.value = "\(rows[num])"
+                char.imageName = "\(prefix)char\(number)n"
+                char.value = "\(rows[number])"
                 chosenChars.append(char)
             }
         }

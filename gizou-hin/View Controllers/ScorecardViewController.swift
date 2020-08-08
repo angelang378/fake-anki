@@ -41,7 +41,7 @@ class ScorecardViewController: ViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? CharPracticeController {
-            vc.chars = missedChars
+            vc.chars = missedChars.shuffled()
         }
     }
     
