@@ -23,6 +23,8 @@
 		0B676F5824D3D28A0036E51D /* ChecklistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F5724D3D28A0036E51D /* ChecklistTableViewController.swift */; };
 		0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FA3A124D5CB15000A8E65 /* CharModel.swift */; };
 		0B969F5524D7C6A100B472F0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B969F5424D7C6A100B472F0 /* CustomTableViewCell.swift */; };
+		0BFE08B824DF695A00D7DEA1 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE08B724DF695A00D7DEA1 /* CanvasView.swift */; };
+		0BFE08BA24DF919900D7DEA1 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0BFE08B924DF919900D7DEA1 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		0B8FA3A124D5CB15000A8E65 /* CharModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharModel.swift; sourceTree = "<group>"; };
 		0B8FA3A424D5CBBF000A8E65 /* Char.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Char.swift; sourceTree = "<group>"; };
 		0B969F5424D7C6A100B472F0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		0BFE08B724DF695A00D7DEA1 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		0BFE08B924DF919900D7DEA1 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		0B676F3824D34D790036E51D /* gizou-hin */ = {
 			isa = PBXGroup;
 			children = (
+				0BFE08B924DF919900D7DEA1 /* README.txt */,
 				0B8FA3A324D5CB33000A8E65 /* View Controllers */,
 				0B676F3924D34D790036E51D /* AppDelegate.swift */,
 				0B676F3B24D34D790036E51D /* SceneDelegate.swift */,
@@ -86,6 +91,7 @@
 				0B0705CB24D4C7E30070F182 /* CheckBox.swift */,
 				0B8FA3A124D5CB15000A8E65 /* CharModel.swift */,
 				0B8FA3A424D5CBBF000A8E65 /* Char.swift */,
+				0BFE08B724DF695A00D7DEA1 /* CanvasView.swift */,
 			);
 			path = "gizou-hin";
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 			files = (
 				0B4AEAA224DDE0DB005A6C43 /* Main.storyboard in Resources */,
 				0B676F4624D34D7A0036E51D /* LaunchScreen.storyboard in Resources */,
+				0BFE08BA24DF919900D7DEA1 /* README.txt in Resources */,
 				0B676F4324D34D7A0036E51D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +191,7 @@
 				0B676F3A24D34D790036E51D /* AppDelegate.swift in Sources */,
 				0B0705CC24D4C7E30070F182 /* CheckBox.swift in Sources */,
 				0B969F5524D7C6A100B472F0 /* CustomTableViewCell.swift in Sources */,
+				0BFE08B824DF695A00D7DEA1 /* CanvasView.swift in Sources */,
 				0B4AEA9F24DDE0CD005A6C43 /* Char.swift in Sources */,
 				0B43C7FB24D7631400C4EB64 /* QuitSceneController.swift in Sources */,
 				0B676F5224D376BB0036E51D /* LoadPracticeController.swift in Sources */,

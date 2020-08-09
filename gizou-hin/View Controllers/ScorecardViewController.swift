@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ScorecardViewController: ViewController {
+class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
+   
     @IBOutlet weak var correct: UILabel!
     var numCorrect = 0
     
     @IBOutlet weak var incorrect: UILabel!
     var numIncorrect = 0
+    
+    @IBOutlet weak var tableOfWrongAnswers: UITableView!
     
     var missedChars = [Char]()
     var allChars = [Char]()
@@ -23,6 +26,8 @@ class ScorecardViewController: ViewController {
         super.viewDidLoad()
         correct.text = "Correct: \(numCorrect)"
         incorrect.text = "Incorrect: \(numIncorrect)"
+        tableOfWrongAnswers.delegate = self
+        tableOfWrongAnswers.dataSource = self
     }
     
     @IBAction func repeatChars(_ sender: Any) {
@@ -48,4 +53,46 @@ class ScorecardViewController: ViewController {
             }
         }
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Characters answered incorrectly"
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return missedChars.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IncorrectCharCell", for: indexPath)
+        cell.textLabel!.text = missedChars[indexPath.row].value[0]
+        cell.imageView?.image = UIImage(named: missedChars[indexPath.row].imageName)
+        cell.backgroundColor = UIColor(red: 1, green: 0.870588, blue: 0.784314, alpha: 1) //hexString: "FFDEC8"
+        return cell
+    }
+    
 }
+
+//hex to uicolor converter code from SO
+//extension UIColor {
+//    convenience init(hexString: String) {
+//        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+//        var int = UInt64()
+//        Scanner(string: hex).scanHexInt64(&int)
+//        let a, r, g, b: UInt64
+//        switch hex.count {
+//        case 3: // RGB (12-bit)
+//            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+//        case 6: // RGB (24-bit)
+//            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+//        case 8: // ARGB (32-bit)
+//            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+//        default:
+//            (a, r, g, b) = (255, 0, 0, 0)
+//        }
+//        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+//    }
+//}

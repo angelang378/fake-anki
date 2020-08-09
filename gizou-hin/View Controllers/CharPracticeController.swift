@@ -36,6 +36,8 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var progressBar: UILabel!
     @IBOutlet weak var progress: UIProgressView!
     
+    @IBOutlet weak var canvas: CanvasView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpChars()
@@ -64,6 +66,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     
     func nextChar(){
         revealAnswer.text = ""
+        canvas.clearCanvas()
         if chars.count > 0{
             self.char = self.chars.remove(at: 0)
             self.currentChar = char.value
@@ -144,6 +147,11 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
             vc.missedChars = wrongAnswers
             vc.allChars = charDeck
         }
+    }
+    
+    
+    @IBAction func clearCanvas(_ sender: Any) {
+        canvas.clearCanvas()
     }
     
 }
