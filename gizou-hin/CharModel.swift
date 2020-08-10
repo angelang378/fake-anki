@@ -72,8 +72,8 @@ class CharModel {
                 chosenChars.append(char)
                 let char2 = Char()
                 char2.imageName = "\(prefix)char9o"
-                char2.value.append("wo")
                 char2.value.append("o")
+                char2.value.append("wo")
                 chosenChars.append(char2)
                 
             } else{

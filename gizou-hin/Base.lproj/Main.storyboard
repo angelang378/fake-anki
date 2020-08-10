@@ -24,9 +24,9 @@
                                     <constraint firstAttribute="width" secondItem="MC4-fw-0bf" secondAttribute="height" multiplier="70:33" id="jaP-0b-MZZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <color key="tintColor" red="0.93747878070000001" green="0.50419771670000002" blue="0.38034889100000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.92156862745098034" green="0.74117647058823533" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="START" backgroundImage="rectangle" catalog="system">
-                                    <color key="titleColor" red="0.92152595520000002" green="0.7427277565" blue="0.24687474970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.92156862745098034" green="0.74117647058823533" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="z7C-dX-PWr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Fx9-wH-yOz"/>
@@ -43,8 +43,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="ZvW-ez-ejU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
-                                <color key="textColor" red="0.85488921399999995" green="0.29742574690000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" red="0.93725490196078431" green="0.50588235294117645" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -140,7 +140,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.86747497990586897" green="0.9504156514138381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.94901960784313721" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="pa7-ne-IHW" firstAttribute="bottom" secondItem="ueY-PK-lGd" secondAttribute="bottom" constant="221" id="7VW-OX-FU9"/>
                             <constraint firstItem="kT9-NP-oTN" firstAttribute="centerY" secondItem="fLY-PN-2HS" secondAttribute="centerY" id="Aab-aj-HR7"/>
@@ -217,7 +217,6 @@
         <!--Character Practice Controller-->
         <scene sceneID="UwD-F4-eaa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="29f-yG-jxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="tUm-pW-PTu" userLabel="Character Practice Controller" customClass="CharPracticeController" customModule="gizou_hin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jxd-5X-WsS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -227,15 +226,15 @@
                                 <rect key="frame" x="75" y="20" width="265" height="321"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lbp-I0-3Iz">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="2"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="0.0"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqk-Ao-Qkn" userLabel="progress">
-                                        <rect key="frame" x="0.0" y="2" width="265" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="56"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" red="0.6705882352941176" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hchar0a" translatesAutoresizingMaskIntoConstraints="NO" id="HzU-gU-FTZ" userLabel="char_image">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kchar11o" translatesAutoresizingMaskIntoConstraints="NO" id="HzU-gU-FTZ" userLabel="char_image">
                                         <rect key="frame" x="0.0" y="56" width="265" height="265"/>
                                     </imageView>
                                 </subviews>
@@ -315,17 +314,24 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="hte-iv-ijs" userLabel="score stack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hte-iv-ijs" userLabel="score stack">
                                         <rect key="frame" x="0.0" y="123.66666666666663" width="341" height="26"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Correct: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-9e-awv" userLabel="Correct">
-                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Correct: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-9e-awv" userLabel="Correct">
+                                                <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ON3-gR-2ZC"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.59607843140000005" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEC-PT-fyX" userLabel="Incorrect">
-                                                <rect key="frame" x="217.66666666666666" y="0.0" width="123.33333333333334" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Incorrect: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEC-PT-fyX" userLabel="Incorrect">
+                                                <rect key="frame" x="175.66666666666663" y="0.0" width="165.33333333333337" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="qCm-Jg-Q7a"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="zZn-zY-Ihs"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <color key="textColor" red="0.95686274510000002" green="0.59607843140000005" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -368,6 +374,7 @@
                         <segue destination="ioe-Iz-6UW" kind="presentation" identifier="goToWinScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="fzS-1G-cPi"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29f-yG-jxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357.971014492754" y="394.56521739130437"/>
         </scene>
@@ -379,39 +386,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果を見てみましょう〜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSv-9G-5qN" userLabel="jiggle text">
-                                <rect key="frame" x="39" y="65" width="231" height="21"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
-                                <color key="textColor" red="0.99607843137254903" green="0.63137254901960782" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiggle" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-bs-9Ph">
-                                <rect key="frame" x="263" y="20" width="131" height="157"/>
+                                <rect key="frame" x="265" y="20" width="129" height="132"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="157" id="jYe-u9-Yrr"/>
-                                    <constraint firstAttribute="width" constant="131" id="yBM-yu-ZOV"/>
+                                    <constraint firstAttribute="height" constant="132" id="jYe-u9-Yrr"/>
+                                    <constraint firstAttribute="width" constant="129" id="yBM-yu-ZOV"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="pld-cr-DDh" userLabel="text stack">
-                                <rect key="frame" x="39" y="132" width="104" height="109.66666666666669"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhv-yN-Qpa">
-                                        <rect key="frame" x="0.0" y="0.0" width="104" height="31.333333333333332"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Incorrect:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt2-eR-IaQ">
-                                        <rect key="frame" x="0.0" y="78.333333333333343" width="104" height="31.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="efI-0Z-5bw">
                                 <rect key="frame" x="39" y="290" width="336" height="234"/>
-                                <color key="backgroundColor" red="1" green="0.87058823529411766" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.90196078431372551" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="234" id="2qP-Zd-Lxx"/>
                                 </constraints>
@@ -433,7 +417,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="306" height="45"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <state key="normal" title="Practice Missed Characters">
-                                            <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.50196078431372548" green="0.3529411764705882" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="repeatChars:" destination="ioe-Iz-6UW" eventType="touchUpInside" id="gQy-Gn-rya"/>
@@ -443,7 +427,7 @@
                                         <rect key="frame" x="0.0" y="55" width="306" height="45"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <state key="normal" title="Repeat Deck">
-                                            <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.50196078431372548" green="0.3529411764705882" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <segue destination="tUm-pW-PTu" kind="presentation" identifier="repeatDeck" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Zs3-uG-jmU"/>
@@ -453,7 +437,7 @@
                                         <rect key="frame" x="0.0" y="110" width="306" height="46"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
                                         <state key="normal" title="Main Menu">
-                                            <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.50196078431372548" green="0.3529411764705882" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <segue destination="z7C-dX-PWr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4PL-TA-X9q"/>
@@ -461,27 +445,74 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="sZG-zn-C1G" userLabel="text stack">
+                                <rect key="frame" x="69" y="173" width="276.66666666666669" height="77"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uJ6-39-bDi">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="77"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhv-yN-Qpa">
+                                                <rect key="frame" x="0.0" y="0.0" width="81" height="31.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VN7-Cp-tsF">
+                                                <rect key="frame" x="0.0" y="31.333333333333339" width="81" height="45.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                <color key="textColor" red="0.77647058823529413" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q1c-hS-8pq">
+                                        <rect key="frame" x="181" y="0.0" width="95.666666666666686" height="77"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Incorrect" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt2-eR-IaQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="31.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bp-LA-JM9">
+                                                <rect key="frame" x="0.0" y="31.333333333333339" width="95.666666666666671" height="45.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                <color key="textColor" red="0.77647058823529413" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果を見てみましょう〜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSv-9G-5qN" userLabel="jiggle text">
+                                <rect key="frame" x="39" y="50" width="231" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
+                                <color key="textColor" red="0.99215686274509807" green="0.59215686274509804" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.94901960784313721" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="efI-0Z-5bw" firstAttribute="top" secondItem="pld-cr-DDh" secondAttribute="bottom" constant="48.333333333333314" id="0Zv-Vb-JiA"/>
                             <constraint firstItem="j3a-bs-9Ph" firstAttribute="top" secondItem="Nmx-rs-UBF" secondAttribute="top" constant="20" symbolic="YES" id="3ef-9G-myy"/>
                             <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="dSv-9G-5qN" secondAttribute="trailing" constant="144" id="509-cF-hDf"/>
+                            <constraint firstItem="2hL-vR-jYH" firstAttribute="trailing" secondItem="sZG-zn-C1G" secondAttribute="trailing" constant="68.329999999999998" id="53Y-Oo-21y"/>
                             <constraint firstItem="efI-0Z-5bw" firstAttribute="leading" secondItem="dSv-9G-5qN" secondAttribute="leading" id="CmA-g5-tbv"/>
-                            <constraint firstItem="efI-0Z-5bw" firstAttribute="leading" secondItem="pld-cr-DDh" secondAttribute="leading" id="F6M-3D-n3b"/>
+                            <constraint firstItem="sZG-zn-C1G" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="69" id="Hca-p3-Fre"/>
+                            <constraint firstItem="sZG-zn-C1G" firstAttribute="top" secondItem="j3a-bs-9Ph" secondAttribute="bottom" constant="21" id="aYH-jl-MYD"/>
                             <constraint firstItem="dSv-9G-5qN" firstAttribute="leading" secondItem="2hL-vR-jYH" secondAttribute="leading" constant="39" id="fqd-LN-Lpz"/>
                             <constraint firstItem="efI-0Z-5bw" firstAttribute="centerX" secondItem="Nmx-rs-UBF" secondAttribute="centerX" id="hez-KY-yU9"/>
                             <constraint firstItem="efI-0Z-5bw" firstAttribute="centerX" secondItem="TAy-TC-gmM" secondAttribute="centerX" id="n4O-6J-k0Z"/>
                             <constraint firstItem="j3a-bs-9Ph" firstAttribute="trailing" secondItem="Nmx-rs-UBF" secondAttribute="trailingMargin" id="oOJ-YA-Cr6"/>
-                            <constraint firstItem="dSv-9G-5qN" firstAttribute="top" secondItem="2hL-vR-jYH" secondAttribute="top" constant="65" id="rJU-Ys-nw3"/>
+                            <constraint firstItem="dSv-9G-5qN" firstAttribute="top" secondItem="2hL-vR-jYH" secondAttribute="top" constant="50" id="rJU-Ys-nw3"/>
+                            <constraint firstItem="efI-0Z-5bw" firstAttribute="top" secondItem="sZG-zn-C1G" secondAttribute="bottom" constant="40" id="s24-Dr-zFt"/>
                             <constraint firstItem="efI-0Z-5bw" firstAttribute="top" secondItem="Nmx-rs-UBF" secondAttribute="top" constant="290" id="u2b-yp-l2Y"/>
                             <constraint firstItem="TAy-TC-gmM" firstAttribute="top" secondItem="efI-0Z-5bw" secondAttribute="bottom" constant="26" id="x6E-Ya-bDN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2hL-vR-jYH"/>
                     </view>
                     <connections>
-                        <outlet property="correct" destination="Yhv-yN-Qpa" id="csn-m3-NRm"/>
-                        <outlet property="incorrect" destination="Vt2-eR-IaQ" id="bPm-vc-Lgg"/>
+                        <outlet property="correct" destination="VN7-Cp-tsF" id="l4o-Be-kJU"/>
+                        <outlet property="incorrect" destination="4bp-LA-JM9" id="Uxg-cD-UhJ"/>
                         <outlet property="tableOfWrongAnswers" destination="efI-0Z-5bw" id="KLd-PH-Ad5"/>
                         <segue destination="tUm-pW-PTu" kind="presentation" identifier="practiceMissedChars" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="vsY-Ku-p2T"/>
                     </connections>
@@ -1095,10 +1126,10 @@
     <resources>
         <image name="bulb" width="203" height="186"/>
         <image name="char" width="132" height="76"/>
-        <image name="hchar0a" width="265" height="265"/>
         <image name="hiragana4" width="600" height="1605"/>
         <image name="jiggle" width="175" height="175"/>
         <image name="katakana_chart2" width="600" height="1603"/>
+        <image name="kchar11o" width="265" height="265"/>
         <image name="pik" width="200" height="174"/>
         <image name="rectangle" catalog="system" width="128" height="93"/>
         <image name="squir" width="162" height="136"/>

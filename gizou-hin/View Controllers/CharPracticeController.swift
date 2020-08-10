@@ -41,6 +41,8 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpChars()
+        numIncorrect.text = "Incorrect: \(incorrect)"
+        numCorrect.text = "Correct: \(correct)"
         charDeck = chars
         total = chars.count
         nextChar()

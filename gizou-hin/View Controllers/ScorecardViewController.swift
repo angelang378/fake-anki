@@ -10,7 +10,7 @@ import UIKit
 
 class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
-   
+    
     @IBOutlet weak var correct: UILabel!
     var numCorrect = 0
     
@@ -24,15 +24,15 @@ class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        correct.text = "Correct: \(numCorrect)"
-        incorrect.text = "Incorrect: \(numIncorrect)"
+        correct.text = "\(numCorrect)"
+        incorrect.text = "\(numIncorrect)"
         tableOfWrongAnswers.delegate = self
         tableOfWrongAnswers.dataSource = self
     }
     
     @IBAction func repeatChars(_ sender: Any) {
         if missedChars.count == 0 {
-            let refreshAlert = UIAlertController(title: "There are no incorrect characters to review!", message: "Click main menu to exit this screen", preferredStyle: UIAlertController.Style.alert)
+            let refreshAlert = UIAlertController(title: "There are no incorrect characters to review!", message: "Select a different option", preferredStyle: UIAlertController.Style.alert)
             
             refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
                 refreshAlert.dismiss(animated: true, completion: nil)
@@ -62,6 +62,11 @@ class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewD
         return "Characters answered incorrectly"
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor(red: 0.898039, green: 0.772549, blue: 0.627451, alpha: 1)
+        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.black
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return missedChars.count
     }
@@ -70,7 +75,8 @@ class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "IncorrectCharCell", for: indexPath)
         cell.textLabel!.text = missedChars[indexPath.row].value[0]
         cell.imageView?.image = UIImage(named: missedChars[indexPath.row].imageName)
-        cell.backgroundColor = UIColor(red: 1, green: 0.870588, blue: 0.784314, alpha: 1) //hexString: "FFDEC8"
+        cell.backgroundColor = UIColor(red: 0.933333, green: 0.901961, blue: 0.854902, alpha: 1)
+        //        cell.backgroundColor = UIColor(hexString: "EEE6DA")
         return cell
     }
     
