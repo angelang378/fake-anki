@@ -81,7 +81,7 @@ class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewD
     }
     
 }
-
+//
 //hex to uicolor converter code from SO
 //extension UIColor {
 //    convenience init(hexString: String) {

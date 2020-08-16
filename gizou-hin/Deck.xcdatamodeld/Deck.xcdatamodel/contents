@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Deck" representedClassName="Deck" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
+    <entity name="Deck" representedClassName="Deck" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="hasCards" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Flashcard" inverseName="inDeck" inverseEntity="Flashcard"/>
+    </entity>
+    <entity name="Flashcard" representedClassName="Flashcard" syncable="YES">
+        <attribute name="backText" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="frontText" attributeType="String"/>
+        <attribute name="num" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="inDeck" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="hasCards" inverseEntity="Deck"/>
     </entity>
     <elements>
-        <element name="Deck" positionX="-54" positionY="-9" width="128" height="58"/>
+        <element name="Deck" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="Flashcard" positionX="-54" positionY="0" width="128" height="118"/>
     </elements>
 </model>
