@@ -2,7 +2,7 @@
 //  Deck+CoreDataProperties.swift
 //  gizou-hin
 //
-//  Created by Angela Ng on 8/15/20.
+//  Created by Angela Ng on 8/29/20.
 //  Copyright © 2020 Angela Ng. All rights reserved.
 //
 //
@@ -13,11 +13,12 @@ import CoreData
 
 extension Deck {
 
-    @nonobjc public class func createFetchRequest() -> NSFetchRequest<Deck> {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Deck> {
         return NSFetchRequest<Deck>(entityName: "Deck")
     }
 
-    @NSManaged public var name: String
+    @NSManaged public var name: String?
+    @NSManaged public var timeStamp: Date?
     @NSManaged public var hasCards: NSSet?
 
 }

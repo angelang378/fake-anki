@@ -11,7 +11,9 @@ import UIKit
 class FlashcardController: ViewController {
     
     var flashcards = [Flashcard]()
-    var card = Flashcard()
+    var card : Flashcard!
+    var missedCards = [Flashcard]()
+    var entireDeck = [Flashcard]()
     
     @IBOutlet weak var flashcard: UILabel!
     @IBOutlet weak var wordDesc: UILabel!
@@ -32,16 +34,13 @@ class FlashcardController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupFlashcards()
+        entireDeck = flashcards
+        flashcards.shuffle()
         incorrect = 0
         correct = 0
         correctCount.text = "Correct: \(correct)"
         incorrectCount.text = "Incorrect: \(incorrect)"
         nextCard()
-    }
-    
-    func setupFlashcards(){
-        
     }
     
     
@@ -57,12 +56,13 @@ class FlashcardController: ViewController {
         flipButton.isHidden = true
         yesButton.isHidden = false
         noButton.isHidden = false
-        flashcard.text = card.backText
-        wordDesc.text = card.description
+        flashcard.text = card!.backText
+        wordDesc.text = (card?.desc ?? "").isEmpty ? "" : card!.desc
         //        flashcard
     }
     
     @IBAction func notRecognized(_ sender: Any) {
+        missedCards.append(card)
         incorrect += 1
         incorrectCount.text = "Incorrect: \(incorrect)"
         nextCard()
@@ -77,13 +77,14 @@ class FlashcardController: ViewController {
     func nextCard(){
         if flashcards.count > 0 {
             card = flashcards.remove(at: 0)
-            flashcard.text = card.frontText
+            flashcard.text = card!.frontText
             wordDesc.text = ""
             flipButton.isHidden = false
             yesButton.isHidden = true
             noButton.isHidden = true
+            canvas.clearCanvas()
         } else{
-            //fin
+            performSegue(withIdentifier: "finishReview", sender: self)
         }
     }
     @IBAction func goBack(_ sender: UIButton) {
@@ -98,5 +99,15 @@ class FlashcardController: ViewController {
         }))
         
         present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? FlashcardScorecardController {
+            vc.numCorrect = correct
+            vc.numIncorrect = incorrect
+            vc.entireDeck = entireDeck
+            vc.missedCards = missedCards
+        }
+        
     }
 }

@@ -12,7 +12,6 @@
 		0B24D3AD24E8869B0006CA2F /* Flashcard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24D3A924E8869B0006CA2F /* Flashcard+CoreDataProperties.swift */; };
 		0B24D3AE24E8869B0006CA2F /* Deck+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24D3AA24E8869B0006CA2F /* Deck+CoreDataClass.swift */; };
 		0B24D3AF24E8869B0006CA2F /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B24D3AB24E8869B0006CA2F /* Deck+CoreDataProperties.swift */; };
-		0B3BE28724E7938D00B0ACC6 /* FlashcardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BE28624E7938D00B0ACC6 /* FlashcardTableView.swift */; };
 		0B4AEA9F24DDE0CD005A6C43 /* Char.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FA3A424D5CBBF000A8E65 /* Char.swift */; };
 		0B4AEAA024DDE0D2005A6C43 /* CharPracticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B747F5824D6668000C793F1 /* CharPracticeController.swift */; };
 		0B4AEAA224DDE0DB005A6C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F3F24D34D790036E51D /* Main.storyboard */; };
@@ -24,8 +23,11 @@
 		0B676F4624D34D7A0036E51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F4424D34D7A0036E51D /* LaunchScreen.storyboard */; };
 		0B676F5224D376BB0036E51D /* LoadPracticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F5124D376BB0036E51D /* LoadPracticeController.swift */; };
 		0B676F5624D38DA90036E51D /* LoadFlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F5524D38DA90036E51D /* LoadFlashcardController.swift */; };
+		0B6BA96F24F98E4300CF6668 /* AddFlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BA96E24F98E4300CF6668 /* AddFlashcardController.swift */; };
+		0B6BA97324FB128E00CF6668 /* FlashcardScorecardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BA97224FB128E00CF6668 /* FlashcardScorecardController.swift */; };
 		0B8DCE2D24E3312C00F3E292 /* FlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DCE2C24E3312C00F3E292 /* FlashcardController.swift */; };
 		0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FA3A124D5CB15000A8E65 /* CharModel.swift */; };
+		0BCBC0EE24EF4A0C006E01BB /* ViewCardsInDeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */; };
 		0BE3DE4424E3968400A4AFC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE3DE4324E3968400A4AFC6 /* CoreData.framework */; };
 		0BE3DE4724E39C7D00A4AFC6 /* Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DE4524E39C7D00A4AFC6 /* Deck.xcdatamodeld */; };
 		0BFE08B824DF695A00D7DEA1 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE08B724DF695A00D7DEA1 /* CanvasView.swift */; };
@@ -38,7 +40,6 @@
 		0B24D3A924E8869B0006CA2F /* Flashcard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flashcard+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0B24D3AA24E8869B0006CA2F /* Deck+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0B24D3AB24E8869B0006CA2F /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		0B3BE28624E7938D00B0ACC6 /* FlashcardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardTableView.swift; sourceTree = "<group>"; };
 		0B4AEAA324DE215D005A6C43 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
 		0B676F3624D34D790036E51D /* gizou-hin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gizou-hin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B676F3924D34D790036E51D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,10 +51,13 @@
 		0B676F4724D34D7A0036E51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B676F5124D376BB0036E51D /* LoadPracticeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPracticeController.swift; sourceTree = "<group>"; };
 		0B676F5524D38DA90036E51D /* LoadFlashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFlashcardController.swift; sourceTree = "<group>"; };
+		0B6BA96E24F98E4300CF6668 /* AddFlashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlashcardController.swift; sourceTree = "<group>"; };
+		0B6BA97224FB128E00CF6668 /* FlashcardScorecardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardScorecardController.swift; sourceTree = "<group>"; };
 		0B747F5824D6668000C793F1 /* CharPracticeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharPracticeController.swift; sourceTree = "<group>"; };
 		0B8DCE2C24E3312C00F3E292 /* FlashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardController.swift; sourceTree = "<group>"; };
 		0B8FA3A124D5CB15000A8E65 /* CharModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharModel.swift; sourceTree = "<group>"; };
 		0B8FA3A424D5CBBF000A8E65 /* Char.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Char.swift; sourceTree = "<group>"; };
+		0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCardsInDeckController.swift; sourceTree = "<group>"; };
 		0BE3DE4124E395A500A4AFC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0BE3DE4324E3968400A4AFC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0BE3DE4624E39C7D00A4AFC6 /* Deck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Deck.xcdatamodel; sourceTree = "<group>"; };
@@ -110,7 +114,6 @@
 				0B8FA3A424D5CBBF000A8E65 /* Char.swift */,
 				0BFE08B724DF695A00D7DEA1 /* CanvasView.swift */,
 				0BE3DE4524E39C7D00A4AFC6 /* Deck.xcdatamodeld */,
-				0B3BE28624E7938D00B0ACC6 /* FlashcardTableView.swift */,
 			);
 			path = "gizou-hin";
 			sourceTree = "<group>";
@@ -124,6 +127,9 @@
 				0B747F5824D6668000C793F1 /* CharPracticeController.swift */,
 				0B4AEAA324DE215D005A6C43 /* ScorecardViewController.swift */,
 				0B8DCE2C24E3312C00F3E292 /* FlashcardController.swift */,
+				0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */,
+				0B6BA96E24F98E4300CF6668 /* AddFlashcardController.swift */,
+				0B6BA97224FB128E00CF6668 /* FlashcardScorecardController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -211,8 +217,8 @@
 			files = (
 				0B4AEAA024DDE0D2005A6C43 /* CharPracticeController.swift in Sources */,
 				0B24D3AF24E8869B0006CA2F /* Deck+CoreDataProperties.swift in Sources */,
-				0B3BE28724E7938D00B0ACC6 /* FlashcardTableView.swift in Sources */,
 				0B4AEAA424DE215D005A6C43 /* ScorecardViewController.swift in Sources */,
+				0B6BA97324FB128E00CF6668 /* FlashcardScorecardController.swift in Sources */,
 				0B8DCE2D24E3312C00F3E292 /* FlashcardController.swift in Sources */,
 				0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */,
 				0B24D3AE24E8869B0006CA2F /* Deck+CoreDataClass.swift in Sources */,
@@ -225,7 +231,9 @@
 				0B676F5224D376BB0036E51D /* LoadPracticeController.swift in Sources */,
 				0B24D3AD24E8869B0006CA2F /* Flashcard+CoreDataProperties.swift in Sources */,
 				0BE3DE4724E39C7D00A4AFC6 /* Deck.xcdatamodeld in Sources */,
+				0B6BA96F24F98E4300CF6668 /* AddFlashcardController.swift in Sources */,
 				0B676F5624D38DA90036E51D /* LoadFlashcardController.swift in Sources */,
+				0BCBC0EE24EF4A0C006E01BB /* ViewCardsInDeckController.swift in Sources */,
 				0B676F3C24D34D790036E51D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

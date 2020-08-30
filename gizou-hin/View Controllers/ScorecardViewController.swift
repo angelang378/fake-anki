@@ -9,8 +9,7 @@
 import UIKit
 
 class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
+
     @IBOutlet weak var correct: UILabel!
     var numCorrect = 0
     
