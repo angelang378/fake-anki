@@ -18,7 +18,6 @@
 		0B4AEAA424DE215D005A6C43 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AEAA324DE215D005A6C43 /* ScorecardViewController.swift */; };
 		0B676F3A24D34D790036E51D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F3924D34D790036E51D /* AppDelegate.swift */; };
 		0B676F3C24D34D790036E51D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F3B24D34D790036E51D /* SceneDelegate.swift */; };
-		0B676F3E24D34D790036E51D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F3D24D34D790036E51D /* ViewController.swift */; };
 		0B676F4324D34D7A0036E51D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F4224D34D7A0036E51D /* Assets.xcassets */; };
 		0B676F4624D34D7A0036E51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B676F4424D34D7A0036E51D /* LaunchScreen.storyboard */; };
 		0B676F5224D376BB0036E51D /* LoadPracticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B676F5124D376BB0036E51D /* LoadPracticeController.swift */; };
@@ -27,6 +26,7 @@
 		0B6BA97324FB128E00CF6668 /* FlashcardScorecardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BA97224FB128E00CF6668 /* FlashcardScorecardController.swift */; };
 		0B8DCE2D24E3312C00F3E292 /* FlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DCE2C24E3312C00F3E292 /* FlashcardController.swift */; };
 		0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FA3A124D5CB15000A8E65 /* CharModel.swift */; };
+		0BC20D8424FC2F6E009165EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC20D8324FC2F6E009165EC /* ViewController.swift */; };
 		0BCBC0EE24EF4A0C006E01BB /* ViewCardsInDeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */; };
 		0BE3DE4424E3968400A4AFC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE3DE4324E3968400A4AFC6 /* CoreData.framework */; };
 		0BE3DE4724E39C7D00A4AFC6 /* Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DE4524E39C7D00A4AFC6 /* Deck.xcdatamodeld */; };
@@ -44,7 +44,6 @@
 		0B676F3624D34D790036E51D /* gizou-hin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gizou-hin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B676F3924D34D790036E51D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B676F3B24D34D790036E51D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B676F3D24D34D790036E51D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B676F4024D34D790036E51D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B676F4224D34D7A0036E51D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B676F4524D34D7A0036E51D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		0B8DCE2C24E3312C00F3E292 /* FlashcardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardController.swift; sourceTree = "<group>"; };
 		0B8FA3A124D5CB15000A8E65 /* CharModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharModel.swift; sourceTree = "<group>"; };
 		0B8FA3A424D5CBBF000A8E65 /* Char.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Char.swift; sourceTree = "<group>"; };
+		0BC20D8324FC2F6E009165EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCardsInDeckController.swift; sourceTree = "<group>"; };
 		0BE3DE4124E395A500A4AFC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0BE3DE4324E3968400A4AFC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -102,7 +102,8 @@
 				0B24D3AA24E8869B0006CA2F /* Deck+CoreDataClass.swift */,
 				0B24D3AB24E8869B0006CA2F /* Deck+CoreDataProperties.swift */,
 				0BFE08B924DF919900D7DEA1 /* README.txt */,
-				0B8FA3A324D5CB33000A8E65 /* View Controllers */,
+				0BC20D8024FC2EB6009165EC /* Flashcard View Controllers */,
+				0B8FA3A324D5CB33000A8E65 /* Char Practice Controllers */,
 				0B676F3924D34D790036E51D /* AppDelegate.swift */,
 				0B676F3B24D34D790036E51D /* SceneDelegate.swift */,
 				0B676F3F24D34D790036E51D /* Main.storyboard */,
@@ -114,24 +115,31 @@
 				0B8FA3A424D5CBBF000A8E65 /* Char.swift */,
 				0BFE08B724DF695A00D7DEA1 /* CanvasView.swift */,
 				0BE3DE4524E39C7D00A4AFC6 /* Deck.xcdatamodeld */,
+				0BC20D8324FC2F6E009165EC /* ViewController.swift */,
 			);
 			path = "gizou-hin";
 			sourceTree = "<group>";
 		};
-		0B8FA3A324D5CB33000A8E65 /* View Controllers */ = {
+		0B8FA3A324D5CB33000A8E65 /* Char Practice Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B676F3D24D34D790036E51D /* ViewController.swift */,
 				0B676F5124D376BB0036E51D /* LoadPracticeController.swift */,
-				0B676F5524D38DA90036E51D /* LoadFlashcardController.swift */,
 				0B747F5824D6668000C793F1 /* CharPracticeController.swift */,
 				0B4AEAA324DE215D005A6C43 /* ScorecardViewController.swift */,
+			);
+			path = "Char Practice Controllers";
+			sourceTree = "<group>";
+		};
+		0BC20D8024FC2EB6009165EC /* Flashcard View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B676F5524D38DA90036E51D /* LoadFlashcardController.swift */,
 				0B8DCE2C24E3312C00F3E292 /* FlashcardController.swift */,
 				0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */,
 				0B6BA96E24F98E4300CF6668 /* AddFlashcardController.swift */,
 				0B6BA97224FB128E00CF6668 /* FlashcardScorecardController.swift */,
 			);
-			path = "View Controllers";
+			path = "Flashcard View Controllers";
 			sourceTree = "<group>";
 		};
 		0BE3DE4024E395A500A4AFC6 /* Frameworks */ = {
@@ -223,9 +231,9 @@
 				0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */,
 				0B24D3AE24E8869B0006CA2F /* Deck+CoreDataClass.swift in Sources */,
 				0B24D3AC24E8869B0006CA2F /* Flashcard+CoreDataClass.swift in Sources */,
-				0B676F3E24D34D790036E51D /* ViewController.swift in Sources */,
 				0B676F3A24D34D790036E51D /* AppDelegate.swift in Sources */,
 				0B0705CC24D4C7E30070F182 /* CheckBox.swift in Sources */,
+				0BC20D8424FC2F6E009165EC /* ViewController.swift in Sources */,
 				0BFE08B824DF695A00D7DEA1 /* CanvasView.swift in Sources */,
 				0B4AEA9F24DDE0CD005A6C43 /* Char.swift in Sources */,
 				0B676F5224D376BB0036E51D /* LoadPracticeController.swift in Sources */,
