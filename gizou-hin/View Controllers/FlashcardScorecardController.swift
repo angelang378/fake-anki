@@ -19,6 +19,7 @@ class FlashcardScorecardController: ViewController, UITableViewDelegate, UITable
     
     var missedCards = [Flashcard]()
     var entireDeck = [Flashcard]()
+    var isReversed : Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,7 @@ class FlashcardScorecardController: ViewController, UITableViewDelegate, UITable
             else {
                 vc.flashcards = entireDeck
             }
+            vc.reverseCards = isReversed
         }
     }
 

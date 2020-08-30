@@ -14,6 +14,7 @@ class FlashcardController: ViewController {
     var card : Flashcard!
     var missedCards = [Flashcard]()
     var entireDeck = [Flashcard]()
+    var reverseCards:Bool = false
     
     @IBOutlet weak var flashcard: UILabel!
     @IBOutlet weak var wordDesc: UILabel!
@@ -52,13 +53,19 @@ class FlashcardController: ViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func flipCard(_ sender: Any) {
+        if reverseCards{
+            flashcard.text = card!.frontText
+            wordDesc.text = ""
+        } else{
+            flashcard.text = card!.backText
+            wordDesc.text = (card?.desc ?? "").isEmpty ? "" : card!.desc
+        }
         flipButton.isHidden = true
         yesButton.isHidden = false
         noButton.isHidden = false
-        flashcard.text = card!.backText
-        wordDesc.text = (card?.desc ?? "").isEmpty ? "" : card!.desc
-        //        flashcard
+        
     }
     
     @IBAction func notRecognized(_ sender: Any) {
@@ -77,8 +84,13 @@ class FlashcardController: ViewController {
     func nextCard(){
         if flashcards.count > 0 {
             card = flashcards.remove(at: 0)
-            flashcard.text = card!.frontText
-            wordDesc.text = ""
+            if reverseCards{
+                flashcard.text = card!.backText
+                wordDesc.text = (card?.desc ?? "").isEmpty ? "" : card!.desc
+            } else{
+                flashcard.text = card!.frontText
+                wordDesc.text = ""
+            }
             flipButton.isHidden = false
             yesButton.isHidden = true
             noButton.isHidden = true
@@ -107,6 +119,7 @@ class FlashcardController: ViewController {
             vc.numIncorrect = incorrect
             vc.entireDeck = entireDeck
             vc.missedCards = missedCards
+            vc.isReversed = reverseCards
         }
         
     }

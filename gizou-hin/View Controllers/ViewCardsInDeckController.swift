@@ -13,6 +13,9 @@ class ViewCardsInDeckController: UIViewController, UITableViewDelegate, UITableV
     
     var deck:Deck!
     
+    @IBOutlet weak var reverseButton: CheckBox!
+    
+    
     @IBOutlet weak var emptyMessage: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -130,6 +133,9 @@ class ViewCardsInDeckController: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startFlashcards"{
             if let vc = segue.destination as? FlashcardController {
+                if reverseButton.isChecked {
+                    vc.reverseCards = true
+                }
                 vc.flashcards = fetchedRC.fetchedObjects!
             }
         } else{
@@ -151,30 +157,7 @@ class ViewCardsInDeckController: UIViewController, UITableViewDelegate, UITableV
                 vc.deck = deck!
             }
         }
-        //        if segue.identifier == "addFlashcardSegue" {
-        //            let nc = segue.destination as! UINavigationController
-        //
-        //            if let vc = nc.topViewController as? AddFlashcardController{
-        //                vc.deck = deck!
-        //            }
-        //        } else if segue.identifier == "editFlashcardSegue" {
-        //            let nc = segue.destination as! UINavigationController
-        //
-        //            if let vc = nc.topViewController as? AddFlashcardController{
-        //                vc.deck = deck!
-        //
-        //                //selected card will not be nil
-        //                if (selectedCard != nil){
-        //                    vc.frontText = selectedCard!.frontText
-        //                    vc.backText = selectedCard!.backText
-        //                    vc.edit = true
-        //                    vc.desc = (selectedCard!.desc ?? "").isEmpty ? "" : selectedCard!.desc
-        //
-        //                }}
-        //        } else {
-        //
-        //        }
-        //    }
+
     }
 }
 
@@ -212,3 +195,10 @@ extension ViewCardsInDeckController: NSFetchedResultsControllerDelegate {
     
 }
 
+extension NSLayoutConstraint {
+
+    override public var description: String {
+        let id = identifier ?? ""
+        return "id: \(id), constant: \(constant)" //you may print whatever you want here
+    }
+}
