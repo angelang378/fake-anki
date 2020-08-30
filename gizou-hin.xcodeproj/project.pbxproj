@@ -27,6 +27,7 @@
 		0B8DCE2D24E3312C00F3E292 /* FlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DCE2C24E3312C00F3E292 /* FlashcardController.swift */; };
 		0B8FA3A224D5CB15000A8E65 /* CharModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FA3A124D5CB15000A8E65 /* CharModel.swift */; };
 		0BC20D8424FC2F6E009165EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC20D8324FC2F6E009165EC /* ViewController.swift */; };
+		0BC20D8624FC303A009165EC /* Picture Sources.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0BC20D8524FC303A009165EC /* Picture Sources.txt */; };
 		0BCBC0EE24EF4A0C006E01BB /* ViewCardsInDeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */; };
 		0BE3DE4424E3968400A4AFC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE3DE4324E3968400A4AFC6 /* CoreData.framework */; };
 		0BE3DE4724E39C7D00A4AFC6 /* Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DE4524E39C7D00A4AFC6 /* Deck.xcdatamodeld */; };
@@ -57,6 +58,7 @@
 		0B8FA3A124D5CB15000A8E65 /* CharModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharModel.swift; sourceTree = "<group>"; };
 		0B8FA3A424D5CBBF000A8E65 /* Char.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Char.swift; sourceTree = "<group>"; };
 		0BC20D8324FC2F6E009165EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0BC20D8524FC303A009165EC /* Picture Sources.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Picture Sources.txt"; sourceTree = "<group>"; };
 		0BCBC0ED24EF4A0C006E01BB /* ViewCardsInDeckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCardsInDeckController.swift; sourceTree = "<group>"; };
 		0BE3DE4124E395A500A4AFC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0BE3DE4324E3968400A4AFC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -116,6 +118,7 @@
 				0BFE08B724DF695A00D7DEA1 /* CanvasView.swift */,
 				0BE3DE4524E39C7D00A4AFC6 /* Deck.xcdatamodeld */,
 				0BC20D8324FC2F6E009165EC /* ViewController.swift */,
+				0BC20D8524FC303A009165EC /* Picture Sources.txt */,
 			);
 			path = "gizou-hin";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				0B4AEAA224DDE0DB005A6C43 /* Main.storyboard in Resources */,
 				0B676F4624D34D7A0036E51D /* LaunchScreen.storyboard in Resources */,
 				0BFE08BA24DF919900D7DEA1 /* README.txt in Resources */,
+				0BC20D8624FC303A009165EC /* Picture Sources.txt in Resources */,
 				0B676F4324D34D7A0036E51D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
