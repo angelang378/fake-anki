@@ -98,7 +98,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
     
     func checkAnswer() {
         if firstView {
-            if currentChar.contains(userInput.text!.lowercased()){
+            if currentChar.contains(userInput.text!.lowercased().trimmingCharacters(in: .whitespaces)){
                 correct += 1
                 numCorrect.text = "Correct: \(correct)"
                 rightAnswer()
@@ -107,7 +107,7 @@ class CharPracticeController: UIViewController, UITextFieldDelegate {
                 wrongAnswer()
             }
         } else{
-            if currentChar.contains(userInput.text!.lowercased()){
+            if currentChar.contains(userInput.text!.lowercased().trimmingCharacters(in: .whitespaces)){
                 rightAnswer()
             } else{
                 charOnScreen.shake()

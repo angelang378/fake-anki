@@ -52,8 +52,8 @@ class AddFlashcardController: UIViewController {
     }
     
     func hasEmptyField() -> Bool {
-        topWarning.isHidden = (vocabWord.text!.isEmpty) ? false : true
-        bottomWarning.isHidden = (meaning.text!.isEmpty) ? false : true
+        topWarning.isHidden = (vocabWord.text!.trimmingCharacters(in: .whitespaces).isEmpty) ? false : true
+        bottomWarning.isHidden = (meaning.text!.trimmingCharacters(in: .whitespaces).isEmpty) ? false : true
         return !(topWarning.isHidden && bottomWarning.isHidden)
     }
     
@@ -66,9 +66,9 @@ class AddFlashcardController: UIViewController {
                 do {
                     let results = try moc.fetch(request)
                     if results.count != 0 {
-                        results[0].setValue(vocabWord.text!, forKey: "frontText")
-                        results[0].setValue(meaning.text!, forKey: "backText")
-                        results[0].setValue(wordDesc.text!, forKey: "desc")
+                        results[0].setValue(vocabWord.text!.trimmingCharacters(in: .whitespaces), forKey: "frontText")
+                        results[0].setValue(meaning.text!.trimmingCharacters(in: .whitespaces), forKey: "backText")
+                        results[0].setValue(wordDesc.text!.trimmingCharacters(in: .whitespaces), forKey: "desc")
                     }
                 } catch {
                     print("Fetch failed: \(error)")
@@ -76,9 +76,9 @@ class AddFlashcardController: UIViewController {
                 
             } else{
                 let card = Flashcard(context: moc)
-                card.frontText = vocabWord.text!
-                card.backText = meaning.text!
-                card.desc = wordDesc?.text
+                card.frontText = vocabWord.text!.trimmingCharacters(in: .whitespaces)
+                card.backText = meaning.text!.trimmingCharacters(in: .whitespaces)
+                card.desc = wordDesc?.text!.trimmingCharacters(in: .whitespaces)
                 card.inDeck = deck!
                 card.timeStamp = NSDate() as Date
             }
