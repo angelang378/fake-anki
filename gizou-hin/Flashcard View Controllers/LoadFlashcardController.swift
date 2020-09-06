@@ -67,7 +67,7 @@ class LoadFlashcardController: UIViewController, UITableViewDelegate, UITableVie
                 let deckToSave = textField.text else{
                     return
             }
-            //            self.saveDeck(name: deckToSave)
+ 
             let newDeck = Deck(context: self.moc)
             newDeck.name = deckToSave
             newDeck.timeStamp = NSDate() as Date
@@ -138,7 +138,6 @@ class LoadFlashcardController: UIViewController, UITableViewDelegate, UITableVie
             if let vc = nc.topViewController as? ViewCardsInDeckController{
                 vc.navigationItem.title = selectedDeck!.name
                 vc.deck = selectedDeck!
-                //                vc.cards = selectedDeck?.hasCards
             }
         }
     }

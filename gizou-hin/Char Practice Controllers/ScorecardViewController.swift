@@ -58,7 +58,7 @@ class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Characters answered incorrectly"
+        return "Missed characters"
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -75,29 +75,7 @@ class ScorecardViewController: ViewController, UITableViewDelegate, UITableViewD
         cell.textLabel!.text = missedChars[indexPath.row].value[0]
         cell.imageView?.image = UIImage(named: missedChars[indexPath.row].imageName)
         cell.backgroundColor = UIColor(red: 0.933333, green: 0.901961, blue: 0.854902, alpha: 1)
-        //        cell.backgroundColor = UIColor(hexString: "EEE6DA")
         return cell
     }
     
 }
-//
-//hex to uicolor converter code from SO
-//extension UIColor {
-//    convenience init(hexString: String) {
-//        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-//        var int = UInt64()
-//        Scanner(string: hex).scanHexInt64(&int)
-//        let a, r, g, b: UInt64
-//        switch hex.count {
-//        case 3: // RGB (12-bit)
-//            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-//        case 6: // RGB (24-bit)
-//            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-//        case 8: // ARGB (32-bit)
-//            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-//        default:
-//            (a, r, g, b) = (255, 0, 0, 0)
-//        }
-//        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
-//    }
-//}
