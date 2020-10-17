@@ -14,6 +14,8 @@ class FlashcardController: ViewController {
     var card : Flashcard!
     var missedCards = [Flashcard]()
     var entireDeck = [Flashcard]()
+    var total = 0
+    var curr = 0
     var reverseCards:Bool = false
     
     @IBOutlet weak var flashcard: UILabel!
@@ -33,12 +35,17 @@ class FlashcardController: ViewController {
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progress: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         entireDeck = flashcards
         flashcards.shuffle()
         incorrect = 0
         correct = 0
+        total = flashcards.count
         correctCount.text = "Correct: \(correct)"
         incorrectCount.text = "Incorrect: \(incorrect)"
         nextCard()
@@ -95,6 +102,9 @@ class FlashcardController: ViewController {
             yesButton.isHidden = true
             noButton.isHidden = true
             canvas.clearCanvas()
+            curr += 1
+            progressBar.progress = Float(curr)/Float(total)
+            progress.text = "\(curr)/\(total)"
         } else{
             performSegue(withIdentifier: "finishReview", sender: self)
         }
